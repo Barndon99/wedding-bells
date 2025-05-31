@@ -3,12 +3,12 @@ import { Box, Heading, Text, VStack, Container, SimpleGrid, Image } from '@chakr
 function Photos() {
   // Placeholder images - replace with actual photos
   const photos = [
-    { id: 1, src: 'https://via.placeholder.com/300x300/FED7D7/E53E3E?text=Photo+1', alt: 'Graham and Kat Photo 1' },
-    { id: 2, src: 'https://via.placeholder.com/300x300/FED7D7/E53E3E?text=Photo+2', alt: 'Graham and Kat Photo 2' },
-    { id: 3, src: 'https://via.placeholder.com/300x300/FED7D7/E53E3E?text=Photo+3', alt: 'Graham and Kat Photo 3' },
-    { id: 4, src: 'https://via.placeholder.com/300x300/FED7D7/E53E3E?text=Photo+4', alt: 'Graham and Kat Photo 4' },
-    { id: 5, src: 'https://via.placeholder.com/300x300/FED7D7/E53E3E?text=Photo+5', alt: 'Graham and Kat Photo 5' },
-    { id: 6, src: 'https://via.placeholder.com/300x300/FED7D7/E53E3E?text=Photo+6', alt: 'Graham and Kat Photo 6' },
+    { id: 1, src: 'https://via.placeholder.com/300x300/FED7D7/E53E3E?text=Photo+1', alt: 'Graham and Katarina Photo 1' },
+    { id: 2, src: 'https://via.placeholder.com/300x300/FED7D7/E53E3E?text=Photo+2', alt: 'Graham and Katarina Photo 2' },
+    { id: 3, src: 'https://via.placeholder.com/300x300/FED7D7/E53E3E?text=Photo+3', alt: 'Graham and Katarina Photo 3' },
+    { id: 4, src: 'https://via.placeholder.com/300x300/FED7D7/E53E3E?text=Photo+4', alt: 'Graham and Katarina Photo 4' },
+    { id: 5, src: 'https://via.placeholder.com/300x300/FED7D7/E53E3E?text=Photo+5', alt: 'Graham and Katarina Photo 5' },
+    { id: 6, src: 'https://via.placeholder.com/300x300/FED7D7/E53E3E?text=Photo+6', alt: 'Graham and Katarina Photo 6' },
   ]
 
   return (

@@ -49,7 +49,7 @@ function Home() {
             letterSpacing="wider"
             textTransform="uppercase"
           >
-            Graham & Kat
+            Graham & Katarina
           </Heading>
 
           <Button
@@ -84,76 +84,87 @@ function Home() {
       </Box>
 
       {/* Wedding Details Section */}
-      <Box bg="#1B4D3E" color="white" py={14}>
-        <Container maxW="container.xl" height="12vh">
-          <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={16}>
-            {/* Left Column - Wedding Details */}
-            <VStack align="start" spacing={8}>
+      <Box bg="#1B4D3E" color="white" h={{ base: "auto", lg: "620px" }}>
+        <SimpleGrid
+          columns={{ base: 1, lg: 2 }}
+          templateColumns={{ base: "1fr", lg: "3fr 2fr" }}
+          h="full"
+          spacing={0}
+        >
+          {/* Left Column - Wedding Details */}
+          <Box p={{ base: 8, lg: 16 }} display="flex" alignItems="center">
+            <VStack align="start" spacing={{ base: 6, lg: 8 }} w="full">
               <Heading
-                fontSize="2xl"
+                fontSize={{ base: "lg", lg: "xl" }}
                 fontWeight="300"
                 letterSpacing="wider"
                 textTransform="uppercase"
+                color="white"
+                mb={{ base: 4, lg: 6 }}
               >
                 Wedding Details
               </Heading>
 
-              <VStack align="start" spacing={6}>
+              <VStack align="start" spacing={{ base: 5, lg: 6 }} w="full">
                 <Box>
-                  <Text fontSize="sm" letterSpacing="wider" textTransform="uppercase" mb={2}>
+                  <Text fontSize="xs" letterSpacing="wider" textTransform="uppercase" mb={2} color="gray.400">
                     Date
                   </Text>
-                  <Text fontSize="lg">Saturday, June 15th</Text>
-                  <Text color="gray.400">2024</Text>
+                  <Text fontSize="sm" color="white" mb={1}>Saturday, June 15th</Text>
+                  <Text fontSize="sm" color="gray.400">2024</Text>
                 </Box>
 
                 <Box>
-                  <Text fontSize="sm" letterSpacing="wider" textTransform="uppercase" mb={2}>
+                  <Text fontSize="xs" letterSpacing="wider" textTransform="uppercase" mb={2} color="gray.400">
                     Reception & Ceremony
                   </Text>
-                  <Text fontSize="lg">Lorem ipsum dolor</Text>
-                  <Text color="gray.400">sit amet consectetur</Text>
+                  <Text fontSize="sm" color="white" mb={1}>The Grand Ballroom</Text>
+                  <Text fontSize="sm" color="gray.400">Downtown Historic District</Text>
                 </Box>
 
                 <Box>
-                  <Text fontSize="sm" letterSpacing="wider" textTransform="uppercase" mb={2}>
+                  <Text fontSize="xs" letterSpacing="wider" textTransform="uppercase" mb={2} color="gray.400">
                     Dress
                   </Text>
-                  <Text fontSize="lg">Formal Attire</Text>
-                  <Text color="gray.400">Black tie optional</Text>
+                  <Text fontSize="sm" color="white" mb={1}>Formal Attire</Text>
+                  <Text fontSize="sm" color="gray.400">Black tie optional</Text>
                 </Box>
               </VStack>
             </VStack>
+          </Box>
 
-            {/* Right Column - Additional Info */}
-            <VStack align="start" spacing={6}>
+          {/* Right Column - Additional Info */}
+          <Box p={{ base: 8, lg: 16 }} display="flex" alignItems="center">
+            <VStack align="start" spacing={{ base: 4, lg: 5 }} w="full">
               <Heading
-                fontSize="lg"
+                fontSize={{ base: "lg", lg: "xl" }}
                 fontWeight="300"
                 letterSpacing="wider"
                 textTransform="uppercase"
+                color="white"
+                mb={{ base: 4, lg: 6 }}
               >
                 A Few Words from the Couple
               </Heading>
 
-              <Text color="gray.300" lineHeight="tall">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              </Text>
+              <VStack align="start" spacing={{ base: 4, lg: 5 }} w="full">
+                <Text color="gray.300" fontSize="sm" lineHeight="relaxed">
+                  We're so excited to celebrate this special day with our closest family and friends.
+                  Your presence means the world to us as we begin this new chapter together.
+                </Text>
 
-              <Text color="gray.300" lineHeight="tall">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-                eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-              </Text>
+                <Text color="gray.300" fontSize="sm" lineHeight="relaxed">
+                  Thank you for being part of our journey and for making this day even more meaningful.
+                </Text>
 
-              <Text color="gray.400" fontSize="sm" mt={4}>
-                With Love,<br />
-                Graham & Kat
-              </Text>
+                <Text color="gray.400" fontSize="sm" mt={{ base: 4, lg: 5 }}>
+                  With Love,<br />
+                  Graham & Katarina
+                </Text>
+              </VStack>
             </VStack>
-          </SimpleGrid>
-        </Container>
+          </Box>
+        </SimpleGrid>
       </Box>
 
       {/* First Section - Text 3/5, Image 2/5 */}
