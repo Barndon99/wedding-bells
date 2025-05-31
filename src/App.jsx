@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 import { Box } from '@chakra-ui/react'
 import Navigation from './components/Navigation'
+import Footer from './components/Footer'
 import Home from './pages/Home'
 import Story from './pages/Story'
 import Details from './pages/Details'
@@ -20,6 +21,7 @@ function App() {
         <Route path="/photos" element={<Photos />} />
         <Route path="/registry" element={<Registry />} />
       </Routes>
+      <Footer />
     </Box>
   )
 }

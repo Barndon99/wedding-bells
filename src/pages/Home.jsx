@@ -15,8 +15,8 @@ function Home() {
       {/* Hero Section */}
       <Box
         position="relative"
-        height="100vh"
-        backgroundImage="url('https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')"
+        height="50vh"
+        backgroundImage="url('src/assets/hero.png')"
         backgroundSize="cover"
         backgroundPosition="center"
         display="flex"
@@ -84,8 +84,8 @@ function Home() {
       </Box>
 
       {/* Wedding Details Section */}
-      <Box bg="gray.800" color="white" py={16}>
-        <Container maxW="container.xl">
+      <Box bg="#1B4D3E" color="white" py={14}>
+        <Container maxW="container.xl" height="12vh">
           <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={16}>
             {/* Left Column - Wedding Details */}
             <VStack align="start" spacing={8}>
@@ -156,9 +156,9 @@ function Home() {
         </Container>
       </Box>
 
-      {/* Getting There & Info Sections */}
-      <SimpleGrid columns={{ base: 1, lg: 2 }} minH="60vh">
-        {/* Left Column - Info Sections */}
+      {/* Getting There & Info Sections - Text 2/3, Image 1/3 */}
+      <SimpleGrid columns={{ base: 2, lg: "2fr 1fr" }} minH="20vh">
+        {/* Left Column - Info Sections (2/3) */}
         <Box bg="gray.50" p={16}>
           <VStack spacing={12} align="start">
             {/* Getting There */}
@@ -252,11 +252,222 @@ function Home() {
           </VStack>
         </Box>
 
-        {/* Right Column - Landscape Image */}
+        {/* Right Column - Landscape Image (1/3) */}
         <Box
           backgroundImage="url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')"
           backgroundSize="cover"
           backgroundPosition="center"
+          minH="20vh"
+        />
+      </SimpleGrid>
+
+      {/* Second Section - Image Left (1/3), Text Right (2/3) */}
+      <SimpleGrid columns={{ base: 2, lg: "1fr 2fr" }} minH="20vh">
+        {/* Left Column - Image (1/3) */}
+        <Box
+          backgroundImage="url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')"
+          backgroundSize="cover"
+          backgroundPosition="center"
+          minH="20vh"
+        />
+
+        {/* Right Column - Info Sections (2/3) */}
+        <Box bg="white" p={16}>
+          <VStack spacing={12} align="start">
+            {/* Activities & Entertainment */}
+            <Box>
+              <Heading
+                fontSize="xl"
+                fontWeight="300"
+                letterSpacing="wider"
+                textTransform="uppercase"
+                mb={6}
+                color="gray.800"
+              >
+                Activities & Entertainment
+              </Heading>
+
+              <SimpleGrid columns={2} spacing={8}>
+                <Box>
+                  <Text fontSize="sm" letterSpacing="wider" textTransform="uppercase" mb={2} color="gray.600">
+                    Live Music
+                  </Text>
+                  <Text fontSize="sm" color="gray.700">
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor.
+                  </Text>
+                </Box>
+
+                <Box>
+                  <Text fontSize="sm" letterSpacing="wider" textTransform="uppercase" mb={2} color="gray.600">
+                    Dancing
+                  </Text>
+                  <Text fontSize="sm" color="gray.700">
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor.
+                  </Text>
+                </Box>
+              </SimpleGrid>
+            </Box>
+
+            {/* Gift Registry */}
+            <Box>
+              <Heading
+                fontSize="xl"
+                fontWeight="300"
+                letterSpacing="wider"
+                textTransform="uppercase"
+                mb={6}
+                color="gray.800"
+              >
+                Gift Registry
+              </Heading>
+
+              <Text fontSize="sm" color="gray.700" mb={2}>
+                Lorem ipsum dolor sit amet consectetur
+              </Text>
+              <Text fontSize="sm" color="gray.700">
+                adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </Text>
+            </Box>
+
+            {/* Special Requests */}
+            <Box>
+              <Heading
+                fontSize="xl"
+                fontWeight="300"
+                letterSpacing="wider"
+                textTransform="uppercase"
+                mb={6}
+                color="gray.800"
+              >
+                Special Requests
+              </Heading>
+
+              <SimpleGrid columns={2} spacing={8}>
+                <Box>
+                  <Text fontSize="sm" letterSpacing="wider" textTransform="uppercase" mb={2} color="gray.600">
+                    Photography
+                  </Text>
+                  <Text fontSize="sm" color="gray.700">
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit.
+                  </Text>
+                </Box>
+
+                <Box>
+                  <Text fontSize="sm" letterSpacing="wider" textTransform="uppercase" mb={2} color="gray.600">
+                    Unplugged Ceremony
+                  </Text>
+                  <Text fontSize="sm" color="gray.700">
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit.
+                  </Text>
+                </Box>
+              </SimpleGrid>
+            </Box>
+          </VStack>
+        </Box>
+      </SimpleGrid>
+
+      {/* Third Section - Text Left (2/3), Image Right (1/3) */}
+      <SimpleGrid columns={{ base: 2, lg: "2fr 1fr" }} minH="20vh">
+        {/* Left Column - Info Sections (2/3) */}
+        <Box bg="gray.50" p={16}>
+          <VStack spacing={12} align="start">
+            {/* Local Attractions */}
+            <Box>
+              <Heading
+                fontSize="xl"
+                fontWeight="300"
+                letterSpacing="wider"
+                textTransform="uppercase"
+                mb={6}
+                color="gray.800"
+              >
+                Local Attractions
+              </Heading>
+
+              <SimpleGrid columns={2} spacing={8}>
+                <Box>
+                  <Text fontSize="sm" letterSpacing="wider" textTransform="uppercase" mb={2} color="gray.600">
+                    Historic Sites
+                  </Text>
+                  <Text fontSize="sm" color="gray.700">
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor.
+                  </Text>
+                </Box>
+
+                <Box>
+                  <Text fontSize="sm" letterSpacing="wider" textTransform="uppercase" mb={2} color="gray.600">
+                    Nature Walks
+                  </Text>
+                  <Text fontSize="sm" color="gray.700">
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor.
+                  </Text>
+                </Box>
+              </SimpleGrid>
+            </Box>
+
+            {/* Weekend Itinerary */}
+            <Box>
+              <Heading
+                fontSize="xl"
+                fontWeight="300"
+                letterSpacing="wider"
+                textTransform="uppercase"
+                mb={6}
+                color="gray.800"
+              >
+                Weekend Itinerary
+              </Heading>
+
+              <Text fontSize="sm" color="gray.700" mb={2}>
+                Lorem ipsum dolor sit amet consectetur
+              </Text>
+              <Text fontSize="sm" color="gray.700">
+                adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </Text>
+            </Box>
+
+            {/* Contact Information */}
+            <Box>
+              <Heading
+                fontSize="xl"
+                fontWeight="300"
+                letterSpacing="wider"
+                textTransform="uppercase"
+                mb={6}
+                color="gray.800"
+              >
+                Contact Information
+              </Heading>
+
+              <SimpleGrid columns={2} spacing={8}>
+                <Box>
+                  <Text fontSize="sm" letterSpacing="wider" textTransform="uppercase" mb={2} color="gray.600">
+                    Wedding Planner
+                  </Text>
+                  <Text fontSize="sm" color="gray.700">
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit.
+                  </Text>
+                </Box>
+
+                <Box>
+                  <Text fontSize="sm" letterSpacing="wider" textTransform="uppercase" mb={2} color="gray.600">
+                    Questions
+                  </Text>
+                  <Text fontSize="sm" color="gray.700">
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit.
+                  </Text>
+                </Box>
+              </SimpleGrid>
+            </Box>
+          </VStack>
+        </Box>
+
+        {/* Right Column - Image (1/3) */}
+        <Box
+          backgroundImage="url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')"
+          backgroundSize="cover"
+          backgroundPosition="center"
+          minH="20vh"
         />
       </SimpleGrid>
     </Box>
