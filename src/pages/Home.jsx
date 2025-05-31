@@ -95,39 +95,39 @@ function Home() {
           <Box p={{ base: 8, lg: 16 }} display="flex" alignItems="center">
             <VStack align="start" spacing={{ base: 6, lg: 8 }} w="full">
               <Heading
-                fontSize={{ base: "lg", lg: "xl" }}
+                fontSize={{ base: "3xl", lg: "4xl" }}
                 fontWeight="300"
+                fontStyle="italic"
                 letterSpacing="wider"
                 textTransform="uppercase"
                 color="white"
-                mb={{ base: 4, lg: 6 }}
+                mb={{ base: 6, lg: 8 }}
               >
                 Wedding Details
               </Heading>
 
-              <VStack align="start" spacing={{ base: 5, lg: 6 }} w="full">
+              <VStack align="start" spacing={{ base: 6, lg: 8 }} w="full">
                 <Box>
-                  <Text fontSize="xs" letterSpacing="wider" textTransform="uppercase" mb={2} color="gray.400">
+                  <Text fontSize={{ base: "sm", lg: "md" }} letterSpacing="wider" textTransform="uppercase" mb={3} color="white">
                     Date
                   </Text>
-                  <Text fontSize="sm" color="white" mb={1}>Saturday, June 15th</Text>
-                  <Text fontSize="sm" color="gray.400">2024</Text>
+                  <Text fontSize={{ base: "lg", lg: "xl" }} color="white" mb={2}>December 10th, 2022</Text>
+                  <Text fontSize={{ base: "md", lg: "lg" }} color="white">5:00pm - 10:30pm</Text>
                 </Box>
 
                 <Box>
-                  <Text fontSize="xs" letterSpacing="wider" textTransform="uppercase" mb={2} color="gray.400">
-                    Reception & Ceremony
+                  <Text fontSize={{ base: "sm", lg: "md" }} letterSpacing="wider" textTransform="uppercase" mb={3} color="white">
+                    Reception Location
                   </Text>
-                  <Text fontSize="sm" color="white" mb={1}>The Grand Ballroom</Text>
-                  <Text fontSize="sm" color="gray.400">Downtown Historic District</Text>
+                  <Text fontSize={{ base: "lg", lg: "xl" }} color="white" mb={2}>858 Phelan Court</Text>
+                  <Text fontSize={{ base: "md", lg: "lg" }} color="white">Camarillo, CA 93010</Text>
                 </Box>
 
                 <Box>
-                  <Text fontSize="xs" letterSpacing="wider" textTransform="uppercase" mb={2} color="gray.400">
+                  <Text fontSize={{ base: "sm", lg: "md" }} letterSpacing="wider" textTransform="uppercase" mb={3} color="white">
                     Dress
                   </Text>
-                  <Text fontSize="sm" color="white" mb={1}>Formal Attire</Text>
-                  <Text fontSize="sm" color="gray.400">Black tie optional</Text>
+                  <Text fontSize={{ base: "lg", lg: "xl" }} color="white" mb={2}>Formal | Cocktail</Text>
                 </Box>
               </VStack>
             </VStack>
@@ -135,31 +135,41 @@ function Home() {
 
           {/* Right Column - Additional Info */}
           <Box p={{ base: 8, lg: 16 }} display="flex" alignItems="center">
-            <VStack align="start" spacing={{ base: 4, lg: 5 }} w="full">
+            <VStack align="start" spacing={{ base: 6, lg: 8 }} w="full">
               <Heading
-                fontSize={{ base: "lg", lg: "xl" }}
+                fontSize={{ base: "2xl", lg: "3xl" }}
                 fontWeight="300"
+                fontStyle="italic"
                 letterSpacing="wider"
                 textTransform="uppercase"
                 color="white"
-                mb={{ base: 4, lg: 6 }}
+                mb={{ base: 6, lg: 8 }}
               >
-                A Few Words from the Couple
+                A Note from the Bride & Groom
               </Heading>
 
-              <VStack align="start" spacing={{ base: 4, lg: 5 }} w="full">
-                <Text color="gray.300" fontSize="sm" lineHeight="relaxed">
-                  We're so excited to celebrate this special day with our closest family and friends.
-                  Your presence means the world to us as we begin this new chapter together.
+              <VStack align="start" spacing={{ base: 6, lg: 8 }} w="full">
+                <Text color="white" fontSize={{ base: "md", lg: "lg" }} lineHeight="relaxed">
+                  We can't tell you how excited we are to share this important day with
+                  all of you. For us we are celebrating so much more than a wedding,
+                  but a lifelong commitment we pray will be filled with laughter,
+                  adventure & lots of love.
                 </Text>
 
-                <Text color="gray.300" fontSize="sm" lineHeight="relaxed">
-                  Thank you for being part of our journey and for making this day even more meaningful.
+                <Text color="white" fontSize={{ base: "md", lg: "lg" }} lineHeight="relaxed">
+                  Please join us in celebration at our reception December 10th, at
+                  5:00pm, following our intimate mountain ceremony.
                 </Text>
 
-                <Text color="gray.400" fontSize="sm" mt={{ base: 4, lg: 5 }}>
+                <Text color="white" fontSize={{ base: "md", lg: "lg" }} lineHeight="relaxed">
+                  Each one of you has played an important role in our story, and we are
+                  excited to have you as witnesses as we step into this God journey
+                  together.
+                </Text>
+
+                <Text color="white" fontSize={{ base: "md", lg: "lg" }} mt={{ base: 6, lg: 8 }} fontStyle="italic">
                   With Love,<br />
-                  Graham & Katarina
+                  Graham and Katarina
                 </Text>
               </VStack>
             </VStack>
