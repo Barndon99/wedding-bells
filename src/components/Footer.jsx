@@ -13,7 +13,7 @@ import { Link as RouterLink } from 'react-router-dom'
 
 function Footer() {
   return (
-    <Box bg="gray.800" color="white" py={16}>
+    <Box bg="#1B4D3E" color="white" py={16}>
       <Container maxW="container.xl">
         <SimpleGrid columns={{ base: 1, md: 4 }} spacing={8}>
           {/* Couple Names */}
