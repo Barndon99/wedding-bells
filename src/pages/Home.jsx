@@ -156,10 +156,19 @@ function Home() {
         </Container>
       </Box>
 
-      {/* Getting There & Info Sections - Text 2/3, Image 1/3 */}
+      {/* First Section - Text 3/5, Image 2/5 */}
       <SimpleGrid columns={{ base: 1, lg: 2 }} templateColumns={{ base: "1fr", lg: "3fr 2fr" }} minH="20vh">
-        {/* Left Column - Info Sections (2/3) */}
-        <Box bg="gray.50" p={16}>
+        {/* Image - First on mobile, Right on desktop */}
+        <Box
+          backgroundImage="url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')"
+          backgroundSize="cover"
+          backgroundPosition="center"
+          minH="20vh"
+          order={{ base: 1, lg: 2 }}
+        />
+
+        {/* Text - Second on mobile, Left on desktop */}
+        <Box bg="gray.50" p={16} order={{ base: 2, lg: 1 }}>
           <VStack spacing={12} align="start">
             {/* Getting There */}
             <Box>
@@ -251,28 +260,21 @@ function Home() {
             </Box>
           </VStack>
         </Box>
-
-        {/* Right Column - Landscape Image (1/3) */}
-        <Box
-          backgroundImage="url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')"
-          backgroundSize="cover"
-          backgroundPosition="center"
-          minH="20vh"
-        />
       </SimpleGrid>
 
-      {/* Second Section - Image Left (1/3), Text Right (2/3) */}
+      {/* Second Section - Image 3/5, Text 2/5 */}
       <SimpleGrid columns={{ base: 1, lg: 2 }} templateColumns={{ base: "1fr", lg: "3fr 2fr" }} minH="20vh">
-        {/* Left Column - Image (1/3) */}
+        {/* Image - First on mobile, Left on desktop */}
         <Box
           backgroundImage="url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')"
           backgroundSize="cover"
           backgroundPosition="center"
           minH="20vh"
+          order={{ base: 1, lg: 1 }}
         />
 
-        {/* Right Column - Info Sections (2/3) */}
-        <Box bg="white" p={16}>
+        {/* Text - Second on mobile, Right on desktop */}
+        <Box bg="white" p={16} order={{ base: 2, lg: 2 }}>
           <VStack spacing={12} align="start">
             {/* Activities & Entertainment */}
             <Box>
@@ -366,10 +368,19 @@ function Home() {
         </Box>
       </SimpleGrid>
 
-      {/* Third Section - Text Left (2/3), Image Right (1/3) */}
+      {/* Third Section - Text 3/5, Image 2/5 */}
       <SimpleGrid columns={{ base: 1, lg: 2 }} templateColumns={{ base: "1fr", lg: "3fr 2fr" }} minH="20vh">
-        {/* Left Column - Info Sections (2/3) */}
-        <Box bg="gray.50" p={16}>
+        {/* Image - First on mobile, Right on desktop */}
+        <Box
+          backgroundImage="url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')"
+          backgroundSize="cover"
+          backgroundPosition="center"
+          minH="20vh"
+          order={{ base: 1, lg: 2 }}
+        />
+
+        {/* Text - Second on mobile, Left on desktop */}
+        <Box bg="gray.50" p={16} order={{ base: 2, lg: 1 }}>
           <VStack spacing={12} align="start">
             {/* Local Attractions */}
             <Box>
@@ -461,14 +472,6 @@ function Home() {
             </Box>
           </VStack>
         </Box>
-
-        {/* Right Column - Image (1/3) */}
-        <Box
-          backgroundImage="url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')"
-          backgroundSize="cover"
-          backgroundPosition="center"
-          minH="20vh"
-        />
       </SimpleGrid>
     </Box>
   )
