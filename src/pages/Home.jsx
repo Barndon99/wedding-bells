@@ -157,7 +157,7 @@ function Home() {
       </Box>
 
       {/* Getting There & Info Sections - Text 2/3, Image 1/3 */}
-      <SimpleGrid columns={{ base: 2, lg: "2fr 1fr" }} minH="20vh">
+      <SimpleGrid columns={{ base: 1, lg: 2 }} templateColumns={{ base: "1fr", lg: "3fr 2fr" }} minH="20vh">
         {/* Left Column - Info Sections (2/3) */}
         <Box bg="gray.50" p={16}>
           <VStack spacing={12} align="start">
@@ -262,7 +262,7 @@ function Home() {
       </SimpleGrid>
 
       {/* Second Section - Image Left (1/3), Text Right (2/3) */}
-      <SimpleGrid columns={{ base: 2, lg: "1fr 2fr" }} minH="20vh">
+      <SimpleGrid columns={{ base: 1, lg: 2 }} templateColumns={{ base: "1fr", lg: "3fr 2fr" }} minH="20vh">
         {/* Left Column - Image (1/3) */}
         <Box
           backgroundImage="url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')"
@@ -367,7 +367,7 @@ function Home() {
       </SimpleGrid>
 
       {/* Third Section - Text Left (2/3), Image Right (1/3) */}
-      <SimpleGrid columns={{ base: 2, lg: "2fr 1fr" }} minH="20vh">
+      <SimpleGrid columns={{ base: 1, lg: 2 }} templateColumns={{ base: "1fr", lg: "3fr 2fr" }} minH="20vh">
         {/* Left Column - Info Sections (2/3) */}
         <Box bg="gray.50" p={16}>
           <VStack spacing={12} align="start">
