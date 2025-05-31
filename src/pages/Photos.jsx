@@ -12,17 +12,25 @@ function Photos() {
   ]
 
   return (
-    <Container maxW="container.lg" py={8}>
-      <VStack spacing={8}>
-        <Box textAlign="center">
-          <Heading as="h1" size="xl" color="pink.500" mb={4}>
-            Our Photos
-          </Heading>
-          <Text color="gray.600" maxW="2xl">
-            A collection of our favorite memories together. From our first adventures 
-            to recent moments, these photos tell the story of our love.
-          </Text>
-        </Box>
+    <Box minH="100vh" bg="#f0f3dc">
+      <Container maxW="container.lg" py={16}>
+        <VStack spacing={12} align="center" textAlign="center">
+          <VStack spacing={6}>
+            <Heading
+              as="h1"
+              fontSize={{ base: "3xl", md: "5xl" }}
+              fontWeight="300"
+              letterSpacing="wider"
+              textTransform="uppercase"
+              color="#1B4D3E"
+            >
+              Our Photos
+            </Heading>
+            <Text fontSize={{ base: "lg", md: "xl" }} color="gray.600" maxW="2xl">
+              A collection of our favorite memories together. From our first adventures
+              to recent moments, these photos tell the story of our love.
+            </Text>
+          </VStack>
         
         <SimpleGrid columns={{ base: 1, sm: 2, md: 3 }} spacing={6} w="full">
           {photos.map((photo) => (
@@ -44,15 +52,16 @@ function Photos() {
             </Box>
           ))}
         </SimpleGrid>
-        
-        <Box textAlign="center" mt={8}>
-          <Text color="gray.600" fontStyle="italic">
-            More photos coming soon! We'll be adding engagement photos and other 
-            special moments as we get closer to the big day.
-          </Text>
-        </Box>
-      </VStack>
-    </Container>
+
+          <Box textAlign="center" mt={8}>
+            <Text color="gray.600" fontStyle="italic">
+              More photos coming soon! We'll be adding engagement photos and other
+              special moments as we get closer to the big day.
+            </Text>
+          </Box>
+        </VStack>
+      </Container>
+    </Box>
   )
 }
 

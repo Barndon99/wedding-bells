@@ -3,23 +3,21 @@ import { Box } from '@chakra-ui/react'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
 import Home from './pages/Home'
-import Story from './pages/Story'
-import Details from './pages/Details'
 import RSVP from './pages/RSVP'
 import Photos from './pages/Photos'
-import Registry from './pages/Registry'
+import SongRequests from './pages/SongRequests'
+import Location from './pages/Location'
 
 function App() {
   return (
-    <Box minH="100vh" bg="gray.50">
+    <Box minH="100vh" bg="#f0f3dc">
       <Navigation />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/story" element={<Story />} />
-        <Route path="/details" element={<Details />} />
         <Route path="/rsvp" element={<RSVP />} />
         <Route path="/photos" element={<Photos />} />
-        <Route path="/registry" element={<Registry />} />
+        <Route path="/song-requests" element={<SongRequests />} />
+        <Route path="/location" element={<Location />} />
       </Routes>
       <Footer />
     </Box>

@@ -45,104 +45,144 @@ function RSVP() {
   }
 
   return (
-    <Container maxW="container.md" py={8}>
-      <VStack spacing={8}>
-        <Box textAlign="center">
-          <Heading as="h1" size="xl" color="pink.500" mb={4}>
-            RSVP
-          </Heading>
-          <Text color="gray.600">
-            Please respond by [RSVP Date]
-          </Text>
-        </Box>
-        
-        <Box as="form" onSubmit={handleSubmit} w="full" maxW="md">
-          <VStack spacing={4}>
-            <FormControl isRequired>
-              <FormLabel>Full Name</FormLabel>
-              <Input 
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                placeholder="Enter your full name"
-              />
-            </FormControl>
-            
-            <FormControl isRequired>
-              <FormLabel>Email</FormLabel>
-              <Input 
-                name="email"
-                type="email"
-                value={formData.email}
-                onChange={handleChange}
-                placeholder="Enter your email"
-              />
-            </FormControl>
-            
-            <FormControl isRequired>
-              <FormLabel>Will you be attending?</FormLabel>
-              <Select 
-                name="attendance"
-                value={formData.attendance}
-                onChange={handleChange}
-                placeholder="Select your response"
-              >
-                <option value="yes">Yes, I'll be there!</option>
-                <option value="no">Sorry, I can't make it</option>
-              </Select>
-            </FormControl>
-            
-            {formData.attendance === 'yes' && (
-              <>
-                <FormControl>
-                  <FormLabel>Number of Guests</FormLabel>
-                  <Select 
-                    name="guests"
-                    value={formData.guests}
-                    onChange={handleChange}
-                  >
-                    <option value="1">Just me</option>
-                    <option value="2">2 people</option>
-                    <option value="3">3 people</option>
-                    <option value="4">4 people</option>
-                  </Select>
-                </FormControl>
-                
-                <FormControl>
-                  <FormLabel>Dietary Restrictions</FormLabel>
-                  <Input 
-                    name="dietaryRestrictions"
-                    value={formData.dietaryRestrictions}
-                    onChange={handleChange}
-                    placeholder="Any dietary restrictions or allergies?"
-                  />
-                </FormControl>
-              </>
-            )}
-            
-            <FormControl>
-              <FormLabel>Message for the Couple</FormLabel>
-              <Textarea 
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                placeholder="Share a message, memory, or well wishes!"
-                rows={4}
-              />
-            </FormControl>
-            
-            <Button 
-              type="submit" 
-              colorScheme="pink" 
-              size="lg" 
-              w="full"
+    <Box minH="100vh" bg="#f0f3dc">
+      <Container maxW="container.lg" py={16}>
+        <VStack spacing={12} align="center" textAlign="center">
+          <VStack spacing={6}>
+            <Heading
+              as="h1"
+              fontSize={{ base: "3xl", md: "5xl" }}
+              fontWeight="300"
+              letterSpacing="wider"
+              textTransform="uppercase"
+              color="#1B4D3E"
             >
-              Submit RSVP
-            </Button>
+              RSVP
+            </Heading>
+            <Text fontSize={{ base: "lg", md: "xl" }} color="gray.600" maxW="2xl">
+              We can't wait to celebrate with you! Please respond by May 1st, 2024
+            </Text>
           </VStack>
-        </Box>
-      </VStack>
-    </Container>
+
+          <Box w="full" maxW="2xl">
+            <Box bg="white" p={8} borderRadius="lg" shadow="lg">
+              <form onSubmit={handleSubmit}>
+                <VStack spacing={6}>
+                  <FormControl isRequired>
+                    <FormLabel color="gray.700" fontWeight="500">Full Name</FormLabel>
+                    <Input
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      placeholder="Enter your full name"
+                      focusBorderColor="#1B4D3E"
+                      size="lg"
+                    />
+                  </FormControl>
+
+                  <FormControl isRequired>
+                    <FormLabel color="gray.700" fontWeight="500">Email</FormLabel>
+                    <Input
+                      name="email"
+                      type="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      placeholder="Enter your email"
+                      focusBorderColor="#1B4D3E"
+                      size="lg"
+                    />
+                  </FormControl>
+
+                  <FormControl isRequired>
+                    <FormLabel color="gray.700" fontWeight="500">Will you be attending?</FormLabel>
+                    <Select
+                      name="attendance"
+                      value={formData.attendance}
+                      onChange={handleChange}
+                      placeholder="Select your response"
+                      focusBorderColor="#1B4D3E"
+                      size="lg"
+                    >
+                      <option value="yes">Yes, I'll be there! 🎉</option>
+                      <option value="no">Sorry, I can't make it 😔</option>
+                    </Select>
+                  </FormControl>
+
+                  {formData.attendance === 'yes' && (
+                    <>
+                      <FormControl>
+                        <FormLabel color="gray.700" fontWeight="500">Number of Guests</FormLabel>
+                        <Select
+                          name="guests"
+                          value={formData.guests}
+                          onChange={handleChange}
+                          focusBorderColor="#1B4D3E"
+                          size="lg"
+                        >
+                          <option value="1">Just me</option>
+                          <option value="2">2 people</option>
+                          <option value="3">3 people</option>
+                          <option value="4">4 people</option>
+                        </Select>
+                      </FormControl>
+
+                      <FormControl>
+                        <FormLabel color="gray.700" fontWeight="500">Dietary Restrictions</FormLabel>
+                        <Input
+                          name="dietaryRestrictions"
+                          value={formData.dietaryRestrictions}
+                          onChange={handleChange}
+                          placeholder="Any dietary restrictions or allergies?"
+                          focusBorderColor="#1B4D3E"
+                          size="lg"
+                        />
+                      </FormControl>
+                    </>
+                  )}
+
+                  <FormControl>
+                    <FormLabel color="gray.700" fontWeight="500">Message for the Couple</FormLabel>
+                    <Textarea
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      placeholder="Share a message, memory, or well wishes!"
+                      rows={4}
+                      focusBorderColor="#1B4D3E"
+                    />
+                  </FormControl>
+
+                  <Button
+                    type="submit"
+                    bg="#1B4D3E"
+                    color="white"
+                    size="lg"
+                    w="full"
+                    py={6}
+                    fontSize="md"
+                    letterSpacing="wider"
+                    textTransform="uppercase"
+                    _hover={{ bg: "#0F3A2E" }}
+                    _active={{ bg: "#0F3A2E" }}
+                  >
+                    Submit RSVP
+                  </Button>
+                </VStack>
+              </form>
+            </Box>
+          </Box>
+
+          <VStack spacing={4} textAlign="center" maxW="2xl">
+            <Text fontSize="lg" color="gray.600" fontWeight="500">
+              Questions about the wedding?
+            </Text>
+            <Text fontSize="md" color="gray.500">
+              Contact us at <Text as="span" color="#1B4D3E" fontWeight="500">hello@grahamandkat.com</Text> or call <Text as="span" color="#1B4D3E" fontWeight="500">(555) 123-4567</Text>
+            </Text>
+          </VStack>
+        </VStack>
+      </Container>
+    </Box>
   )
 }
 

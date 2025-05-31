@@ -181,7 +181,7 @@ function Home() {
       <SimpleGrid columns={{ base: 1, lg: 2 }} templateColumns={{ base: "1fr", lg: "3fr 2fr" }} minH="20vh">
         {/* Image - First on mobile, Right on desktop */}
         <Box
-          backgroundImage="url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')"
+          backgroundImage="url('src/assets/laugh.jpg')"
           backgroundSize="cover"
           backgroundPosition="center"
           minH="20vh"
@@ -189,7 +189,7 @@ function Home() {
         />
 
         {/* Text - Second on mobile, Left on desktop */}
-        <Box bg="gray.50" p={16} order={{ base: 2, lg: 1 }}>
+        <Box bg="#f0f3dc" p={16} order={{ base: 2, lg: 1 }}>
           <VStack spacing={12} align="start">
             {/* Getting There */}
             <Box>
@@ -317,7 +317,7 @@ function Home() {
       <SimpleGrid columns={{ base: 1, lg: 2 }} templateColumns={{ base: "1fr", lg: "3fr 2fr" }} minH="20vh">
         {/* Image - First on mobile, Left on desktop */}
         <Box
-          backgroundImage="url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')"
+          backgroundImage="url('src/assets/twirl.jpg')"
           backgroundSize="cover"
           backgroundPosition="center"
           minH="20vh"
@@ -325,37 +325,38 @@ function Home() {
         />
 
         {/* Text - Second on mobile, Right on desktop */}
-        <Box bg="white" p={16} order={{ base: 2, lg: 2 }}>
+        <Box bg="#f0f3dc" p={16} order={{ base: 2, lg: 2 }}>
           <VStack spacing={12} align="start">
             {/* Activities & Entertainment */}
             <Box>
               <Heading
-                fontSize="xl"
+                fontSize={{ base: "2xl", lg: "3xl" }}
                 fontWeight="300"
+                fontStyle="italic"
                 letterSpacing="wider"
                 textTransform="uppercase"
-                mb={6}
+                mb={{ base: 6, lg: 8 }}
                 color="gray.800"
               >
                 Activities & Entertainment
               </Heading>
 
-              <SimpleGrid columns={2} spacing={8}>
+              <SimpleGrid columns={2} spacing={{ base: 6, lg: 8 }}>
                 <Box>
-                  <Text fontSize="sm" letterSpacing="wider" textTransform="uppercase" mb={2} color="gray.600">
+                  <Text fontSize={{ base: "md", lg: "lg" }} letterSpacing="wider" textTransform="uppercase" mb={3} color="gray.800" fontWeight="500">
                     Live Music
                   </Text>
-                  <Text fontSize="sm" color="gray.700">
-                    Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor.
+                  <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" lineHeight="relaxed">
+                    Acoustic performances throughout the evening with local artists
                   </Text>
                 </Box>
 
                 <Box>
-                  <Text fontSize="sm" letterSpacing="wider" textTransform="uppercase" mb={2} color="gray.600">
+                  <Text fontSize={{ base: "md", lg: "lg" }} letterSpacing="wider" textTransform="uppercase" mb={3} color="gray.800" fontWeight="500">
                     Dancing
                   </Text>
-                  <Text fontSize="sm" color="gray.700">
-                    Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor.
+                  <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" lineHeight="relaxed">
+                    Open dance floor with DJ playing your favorite hits
                   </Text>
                 </Box>
               </SimpleGrid>
@@ -364,53 +365,55 @@ function Home() {
             {/* Gift Registry */}
             <Box>
               <Heading
-                fontSize="xl"
+                fontSize={{ base: "2xl", lg: "3xl" }}
                 fontWeight="300"
+                fontStyle="italic"
                 letterSpacing="wider"
                 textTransform="uppercase"
-                mb={6}
+                mb={{ base: 6, lg: 8 }}
                 color="gray.800"
               >
                 Gift Registry
               </Heading>
 
-              <Text fontSize="sm" color="gray.700" mb={2}>
-                Lorem ipsum dolor sit amet consectetur
+              <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" mb={3} lineHeight="relaxed">
+                Your presence is the greatest gift of all
               </Text>
-              <Text fontSize="sm" color="gray.700">
-                adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" lineHeight="relaxed">
+                For those who wish to give, we've registered at <Text as="span" textDecoration="underline">Williams Sonoma</Text> and <Text as="span" textDecoration="underline">Crate & Barrel</Text>
               </Text>
             </Box>
 
             {/* Special Requests */}
             <Box>
               <Heading
-                fontSize="xl"
+                fontSize={{ base: "2xl", lg: "3xl" }}
                 fontWeight="300"
+                fontStyle="italic"
                 letterSpacing="wider"
                 textTransform="uppercase"
-                mb={6}
+                mb={{ base: 6, lg: 8 }}
                 color="gray.800"
               >
                 Special Requests
               </Heading>
 
-              <SimpleGrid columns={2} spacing={8}>
+              <SimpleGrid columns={2} spacing={{ base: 6, lg: 8 }}>
                 <Box>
-                  <Text fontSize="sm" letterSpacing="wider" textTransform="uppercase" mb={2} color="gray.600">
+                  <Text fontSize={{ base: "md", lg: "lg" }} letterSpacing="wider" textTransform="uppercase" mb={3} color="gray.800" fontWeight="500">
                     Photography
                   </Text>
-                  <Text fontSize="sm" color="gray.700">
-                    Lorem ipsum dolor sit amet consectetur adipiscing elit.
+                  <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" lineHeight="relaxed">
+                    Please share your photos with #GrahamAndKat
                   </Text>
                 </Box>
 
                 <Box>
-                  <Text fontSize="sm" letterSpacing="wider" textTransform="uppercase" mb={2} color="gray.600">
+                  <Text fontSize={{ base: "md", lg: "lg" }} letterSpacing="wider" textTransform="uppercase" mb={3} color="gray.800" fontWeight="500">
                     Unplugged Ceremony
                   </Text>
-                  <Text fontSize="sm" color="gray.700">
-                    Lorem ipsum dolor sit amet consectetur adipiscing elit.
+                  <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" lineHeight="relaxed">
+                    Please keep phones and cameras away during the ceremony
                   </Text>
                 </Box>
               </SimpleGrid>
@@ -423,7 +426,7 @@ function Home() {
       <SimpleGrid columns={{ base: 1, lg: 2 }} templateColumns={{ base: "1fr", lg: "3fr 2fr" }} minH="20vh">
         {/* Image - First on mobile, Right on desktop */}
         <Box
-          backgroundImage="url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')"
+          backgroundImage="url('src/assets/sitting.jpg')"
           backgroundSize="cover"
           backgroundPosition="center"
           minH="20vh"
@@ -431,37 +434,38 @@ function Home() {
         />
 
         {/* Text - Second on mobile, Left on desktop */}
-        <Box bg="gray.50" p={16} order={{ base: 2, lg: 1 }}>
+        <Box bg="#f0f3dc" p={16} order={{ base: 2, lg: 1 }}>
           <VStack spacing={12} align="start">
             {/* Local Attractions */}
             <Box>
               <Heading
-                fontSize="xl"
+                fontSize={{ base: "2xl", lg: "3xl" }}
                 fontWeight="300"
+                fontStyle="italic"
                 letterSpacing="wider"
                 textTransform="uppercase"
-                mb={6}
+                mb={{ base: 6, lg: 8 }}
                 color="gray.800"
               >
                 Local Attractions
               </Heading>
 
-              <SimpleGrid columns={2} spacing={8}>
+              <SimpleGrid columns={2} spacing={{ base: 6, lg: 8 }}>
                 <Box>
-                  <Text fontSize="sm" letterSpacing="wider" textTransform="uppercase" mb={2} color="gray.600">
+                  <Text fontSize={{ base: "md", lg: "lg" }} letterSpacing="wider" textTransform="uppercase" mb={3} color="gray.800" fontWeight="500">
                     Historic Sites
                   </Text>
-                  <Text fontSize="sm" color="gray.700">
-                    Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor.
+                  <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" lineHeight="relaxed">
+                    Explore the charming downtown area with vintage shops and galleries
                   </Text>
                 </Box>
 
                 <Box>
-                  <Text fontSize="sm" letterSpacing="wider" textTransform="uppercase" mb={2} color="gray.600">
+                  <Text fontSize={{ base: "md", lg: "lg" }} letterSpacing="wider" textTransform="uppercase" mb={3} color="gray.800" fontWeight="500">
                     Nature Walks
                   </Text>
-                  <Text fontSize="sm" color="gray.700">
-                    Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor.
+                  <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" lineHeight="relaxed">
+                    Beautiful hiking trails with ocean views just minutes away
                   </Text>
                 </Box>
               </SimpleGrid>
@@ -470,53 +474,55 @@ function Home() {
             {/* Weekend Itinerary */}
             <Box>
               <Heading
-                fontSize="xl"
+                fontSize={{ base: "2xl", lg: "3xl" }}
                 fontWeight="300"
+                fontStyle="italic"
                 letterSpacing="wider"
                 textTransform="uppercase"
-                mb={6}
+                mb={{ base: 6, lg: 8 }}
                 color="gray.800"
               >
                 Weekend Itinerary
               </Heading>
 
-              <Text fontSize="sm" color="gray.700" mb={2}>
-                Lorem ipsum dolor sit amet consectetur
+              <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" mb={3} lineHeight="relaxed">
+                Friday: Welcome drinks at the hotel bar
               </Text>
-              <Text fontSize="sm" color="gray.700">
-                adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" lineHeight="relaxed">
+                Saturday: Ceremony at 4pm, reception to follow until midnight
               </Text>
             </Box>
 
             {/* Contact Information */}
             <Box>
               <Heading
-                fontSize="xl"
+                fontSize={{ base: "2xl", lg: "3xl" }}
                 fontWeight="300"
+                fontStyle="italic"
                 letterSpacing="wider"
                 textTransform="uppercase"
-                mb={6}
+                mb={{ base: 6, lg: 8 }}
                 color="gray.800"
               >
                 Contact Information
               </Heading>
 
-              <SimpleGrid columns={2} spacing={8}>
+              <SimpleGrid columns={2} spacing={{ base: 6, lg: 8 }}>
                 <Box>
-                  <Text fontSize="sm" letterSpacing="wider" textTransform="uppercase" mb={2} color="gray.600">
+                  <Text fontSize={{ base: "md", lg: "lg" }} letterSpacing="wider" textTransform="uppercase" mb={3} color="gray.800" fontWeight="500">
                     Wedding Planner
                   </Text>
-                  <Text fontSize="sm" color="gray.700">
-                    Lorem ipsum dolor sit amet consectetur adipiscing elit.
+                  <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" lineHeight="relaxed">
+                    Sarah Johnson - (555) 123-4567
                   </Text>
                 </Box>
 
                 <Box>
-                  <Text fontSize="sm" letterSpacing="wider" textTransform="uppercase" mb={2} color="gray.600">
+                  <Text fontSize={{ base: "md", lg: "lg" }} letterSpacing="wider" textTransform="uppercase" mb={3} color="gray.800" fontWeight="500">
                     Questions
                   </Text>
-                  <Text fontSize="sm" color="gray.700">
-                    Lorem ipsum dolor sit amet consectetur adipiscing elit.
+                  <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" lineHeight="relaxed">
+                    Email us at hello@grahamandkat.com
                   </Text>
                 </Box>
               </SimpleGrid>

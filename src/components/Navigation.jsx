@@ -20,11 +20,10 @@ import { Link as RouterLink, useLocation } from 'react-router-dom'
 
 const navItems = [
   { name: 'Home', path: '/' },
-  { name: 'Our Story', path: '/story' },
-  { name: 'Details', path: '/details' },
   { name: 'RSVP', path: '/rsvp' },
   { name: 'Photos', path: '/photos' },
-  { name: 'Registry', path: '/registry' }
+  { name: 'Song Requests', path: '/song-requests' },
+  { name: 'Location', path: '/location' }
 ]
 
 function Navigation() {
@@ -33,7 +32,7 @@ function Navigation() {
 
   const NavLink = ({ children, to, ...props }) => {
     const isActive = location.pathname === to
-    
+
     return (
       <Link
         as={RouterLink}
@@ -41,11 +40,11 @@ function Navigation() {
         px={2}
         py={1}
         rounded="md"
-        color={isActive ? 'pink.500' : 'gray.600'}
+        color={isActive ? '#1B4D3E' : 'gray.600'}
         fontWeight={isActive ? 'bold' : 'normal'}
         _hover={{
           textDecoration: 'none',
-          color: 'pink.500',
+          color: '#1B4D3E',
         }}
         {...props}
       >
@@ -57,7 +56,7 @@ function Navigation() {
   return (
     <Box bg="white" px={4} shadow="sm" position="sticky" top={0} zIndex={1000}>
       <Flex h={16} alignItems="center" justifyContent="space-between">
-        <Heading as={RouterLink} to="/" size="md" color="pink.500" _hover={{ textDecoration: 'none' }}>
+        <Heading as={RouterLink} to="/" size="md" color="#1B4D3E" _hover={{ textDecoration: 'none' }}>
           Graham & Katarina
         </Heading>
 
@@ -87,7 +86,7 @@ function Navigation() {
         <DrawerContent>
           <DrawerCloseButton />
           <DrawerHeader borderBottomWidth="1px">
-            <Heading size="md" color="pink.500">
+            <Heading size="md" color="#1B4D3E">
               Graham & Katarina
             </Heading>
           </DrawerHeader>
