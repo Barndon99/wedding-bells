@@ -194,32 +194,36 @@ function Home() {
             {/* Getting There */}
             <Box>
               <Heading
-                fontSize="xl"
+                fontSize={{ base: "2xl", lg: "3xl" }}
                 fontWeight="300"
+                fontStyle="italic"
                 letterSpacing="wider"
                 textTransform="uppercase"
-                mb={6}
+                mb={{ base: 6, lg: 8 }}
                 color="gray.800"
               >
                 Getting There
               </Heading>
 
-              <SimpleGrid columns={2} spacing={8}>
+              <SimpleGrid columns={2} spacing={{ base: 6, lg: 8 }}>
                 <Box>
-                  <Text fontSize="sm" letterSpacing="wider" textTransform="uppercase" mb={2} color="gray.600">
+                  <Text fontSize={{ base: "md", lg: "lg" }} letterSpacing="wider" textTransform="uppercase" mb={3} color="gray.800" fontWeight="500">
                     By Car
                   </Text>
-                  <Text fontSize="sm" color="gray.700">
-                    Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor.
+                  <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" lineHeight="relaxed">
+                    1 Hour Drive from DTLA
+                  </Text>
+                  <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" lineHeight="relaxed">
+                    5 Hour Drive from San Diego
                   </Text>
                 </Box>
 
                 <Box>
-                  <Text fontSize="sm" letterSpacing="wider" textTransform="uppercase" mb={2} color="gray.600">
+                  <Text fontSize={{ base: "md", lg: "lg" }} letterSpacing="wider" textTransform="uppercase" mb={3} color="gray.800" fontWeight="500">
                     By Flight
                   </Text>
-                  <Text fontSize="sm" color="gray.700">
-                    Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor.
+                  <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" lineHeight="relaxed">
+                    We recommend flying into Los Angeles International Airport or Burbank
                   </Text>
                 </Box>
               </SimpleGrid>
@@ -228,53 +232,79 @@ function Home() {
             {/* Where to Stay */}
             <Box>
               <Heading
-                fontSize="xl"
+                fontSize={{ base: "2xl", lg: "3xl" }}
                 fontWeight="300"
+                fontStyle="italic"
                 letterSpacing="wider"
                 textTransform="uppercase"
-                mb={6}
+                mb={{ base: 6, lg: 8 }}
                 color="gray.800"
               >
                 Where to Stay
               </Heading>
 
-              <Text fontSize="sm" color="gray.700" mb={2}>
-                Lorem ipsum dolor sit amet consectetur
+              <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" mb={3} lineHeight="relaxed">
+                Hampton Inn & Suites, Camarillo or Thousand Oaks
               </Text>
-              <Text fontSize="sm" color="gray.700">
-                adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" lineHeight="relaxed">
+                <Text as="span" textDecoration="underline">Sonesta Select Camarillo</Text> | <Text as="span" textDecoration="underline">Air BnB</Text> | <Text as="span" textDecoration="underline">Vrbo</Text>
               </Text>
             </Box>
 
             {/* Great Food & Drinks */}
             <Box>
               <Heading
-                fontSize="xl"
+                fontSize={{ base: "2xl", lg: "3xl" }}
                 fontWeight="300"
+                fontStyle="italic"
                 letterSpacing="wider"
                 textTransform="uppercase"
-                mb={6}
+                mb={{ base: 6, lg: 8 }}
                 color="gray.800"
               >
                 Great Food & Drinks
               </Heading>
 
-              <SimpleGrid columns={2} spacing={8}>
+              <SimpleGrid columns={2} spacing={{ base: 6, lg: 8 }}>
                 <Box>
-                  <Text fontSize="sm" letterSpacing="wider" textTransform="uppercase" mb={2} color="gray.600">
-                    Cocktails
+                  <Text fontSize={{ base: "md", lg: "lg" }} letterSpacing="wider" textTransform="uppercase" mb={3} color="gray.800" fontWeight="500">
+                    Coffee
                   </Text>
-                  <Text fontSize="sm" color="gray.700">
-                    Lorem ipsum dolor sit amet consectetur adipiscing elit.
+                  <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" lineHeight="relaxed" mb={2}>
+                    Cafe Ficelle
+                  </Text>
+                  <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" lineHeight="relaxed" mb={2}>
+                    Ragamuffin Coffee Roasters
+                  </Text>
+                  <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" lineHeight="relaxed" mb={2}>
+                    Ten Speed Coffee
+                  </Text>
+                  <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" lineHeight="relaxed">
+                    Frontside Cafe
                   </Text>
                 </Box>
 
                 <Box>
-                  <Text fontSize="sm" letterSpacing="wider" textTransform="uppercase" mb={2} color="gray.600">
-                    Local Cuisine
+                  <Text fontSize={{ base: "md", lg: "lg" }} letterSpacing="wider" textTransform="uppercase" mb={3} color="gray.800" fontWeight="500">
+                    Good Grub
                   </Text>
-                  <Text fontSize="sm" color="gray.700">
-                    Lorem ipsum dolor sit amet consectetur adipiscing elit.
+                  <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" lineHeight="relaxed" mb={2}>
+                    Twenty88 Bistro
+                  </Text>
+                  <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" lineHeight="relaxed" mb={2}>
+                    BLVD Burger
+                  </Text>
+                  <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" lineHeight="relaxed" mb={2}>
+                    Silverlake Ramen
+                  </Text>
+                  <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" lineHeight="relaxed" mb={2}>
+                    Luv n Eat Thai
+                  </Text>
+                  <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" lineHeight="relaxed" mb={2}>
+                    Sushi Fujiya
+                  </Text>
+                  <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" lineHeight="relaxed">
+                    Institution Ale
                   </Text>
                 </Box>
               </SimpleGrid>
