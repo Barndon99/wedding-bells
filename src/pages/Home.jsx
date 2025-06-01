@@ -94,12 +94,31 @@ function Home() {
       </Box>
 
       {/* Wedding Details Section */}
-      <Box bg="#1B4D3E" color="white" h={{ base: "auto", lg: "620px" }}>
+      <Box bg="#1B4D3E" color="white" h={{ base: "auto", lg: "620px" }} position="relative">
+        {/* Pineapple decoration */}
+        <Box
+          position="absolute"
+          bottom={{ base: 4, lg: 8 }}
+          right={{ base: 4, lg: 8 }}
+          w={{ base: "60px", lg: "80px" }}
+          h={{ base: "60px", lg: "80px" }}
+          opacity={0.3}
+          zIndex={1}
+        >
+          <img
+            src="/assets/pineapple.svg"
+            alt="Pineapple decoration"
+            style={{ width: "100%", height: "100%", filter: "brightness(0) invert(1)" }}
+          />
+        </Box>
+
         <SimpleGrid
           columns={{ base: 1, lg: 2 }}
           templateColumns={{ base: "1fr", lg: "3fr 2fr" }}
           h="full"
           spacing={0}
+          position="relative"
+          zIndex={2}
         >
           {/* Left Column - Wedding Details */}
           <Box p={{ base: 8, lg: 16 }} display="flex" alignItems="center">
