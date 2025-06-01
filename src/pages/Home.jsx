@@ -15,8 +15,8 @@ function Home() {
       {/* Hero Section */}
       <Box
         position="relative"
-        height="50vh"
-        backgroundImage="url('src/assets/hero.png')"
+        height="60vh"
+        backgroundImage="url('/assets/hero.png')"
         backgroundSize="cover"
         backgroundPosition="center"
         display="flex"
@@ -34,7 +34,7 @@ function Home() {
         />
 
         {/* Hero Content */}
-        <VStack spacing={8} textAlign="center" position="relative" zIndex={1} color="white">
+        <VStack spacing={6} textAlign="center" position="relative" zIndex={1} color="white">
           {/* Small dots decoration */}
           <HStack spacing={2} mb={4}>
             <Box w={2} h={2} bg="white" borderRadius="full" />
@@ -48,6 +48,7 @@ function Home() {
             fontWeight="300"
             letterSpacing="wider"
             textTransform="uppercase"
+            mb="60px"
           >
             Graham & Katarina
           </Heading>
@@ -56,7 +57,7 @@ function Home() {
             bg="white"
             color="gray.800"
             px={8}
-            py={6}
+            py={4}
             borderRadius="full"
             fontSize="sm"
             letterSpacing="wider"
@@ -66,20 +67,22 @@ function Home() {
             Save the Date • June 15, 2024
           </Button>
 
-          <Button
-            variant="outline"
-            borderColor="white"
-            color="white"
-            px={6}
-            py={4}
-            borderRadius="full"
-            fontSize="sm"
-            letterSpacing="wider"
-            textTransform="uppercase"
-            _hover={{ bg: "whiteAlpha.200" }}
-          >
-            RSVP
-          </Button>
+          <Box>
+            <Button
+              variant="outline"
+              borderColor="white"
+              color="white"
+              px={6}
+              py={4}
+              borderRadius="full"
+              fontSize="sm"
+              letterSpacing="wider"
+              textTransform="uppercase"
+              _hover={{ bg: "whiteAlpha.200" }}
+            >
+              RSVP
+            </Button>
+          </Box>
         </VStack>
       </Box>
 
@@ -181,7 +184,7 @@ function Home() {
       <SimpleGrid columns={{ base: 1, lg: 2 }} templateColumns={{ base: "1fr", lg: "3fr 2fr" }} minH="20vh">
         {/* Image - First on mobile, Right on desktop */}
         <Box
-          backgroundImage="url('src/assets/laugh.jpg')"
+          backgroundImage="url('/assets/laugh.jpg')"
           backgroundSize="cover"
           backgroundPosition="center"
           minH="20vh"
@@ -317,7 +320,7 @@ function Home() {
       <SimpleGrid columns={{ base: 1, lg: 2 }} templateColumns={{ base: "1fr", lg: "3fr 2fr" }} minH="20vh">
         {/* Image - First on mobile, Left on desktop */}
         <Box
-          backgroundImage="url('src/assets/twirl.jpg')"
+          backgroundImage="url('/assets/twirl.jpg')"
           backgroundSize="cover"
           backgroundPosition="center"
           minH="20vh"
@@ -426,7 +429,7 @@ function Home() {
       <SimpleGrid columns={{ base: 1, lg: 2 }} templateColumns={{ base: "1fr", lg: "3fr 2fr" }} minH="20vh">
         {/* Image - First on mobile, Right on desktop */}
         <Box
-          backgroundImage="url('src/assets/sitting.jpg')"
+          backgroundImage="url('/assets/sitting.jpg')"
           backgroundSize="cover"
           backgroundPosition="center"
           minH="20vh"

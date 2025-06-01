@@ -34,20 +34,24 @@ function Photos() {
         
         <SimpleGrid columns={{ base: 1, sm: 2, md: 3 }} spacing={6} w="full">
           {photos.map((photo) => (
-            <Box 
+            <Box
               key={photo.id}
-              borderRadius="lg" 
-              overflow="hidden" 
+              borderRadius="lg"
+              overflow="hidden"
               boxShadow="md"
               transition="transform 0.2s"
               _hover={{ transform: 'scale(1.05)' }}
+              position="relative"
+              aspectRatio="1"
+              bg="white"
             >
-              <Image 
-                src={photo.src} 
+              <Image
+                src={photo.src}
                 alt={photo.alt}
                 w="full"
-                h="250px"
+                h="full"
                 objectFit="cover"
+                objectPosition="center"
               />
             </Box>
           ))}
