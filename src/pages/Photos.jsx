@@ -1,4 +1,5 @@
 import { Box, Heading, Text, VStack, Container, SimpleGrid, Image } from '@chakra-ui/react'
+import { SlideUp, FadeIn } from '../components/AnimatedSection'
 
 function Photos() {
   // Placeholder images - replace with actual photos
@@ -15,24 +16,27 @@ function Photos() {
     <Box minH="100vh" bg="#f0f3dc">
       <Container maxW="container.lg" py={16}>
         <VStack spacing={12} align="center" textAlign="center">
-          <VStack spacing={6}>
-            <Heading
-              as="h1"
-              fontSize={{ base: "3xl", md: "5xl" }}
-              fontWeight="300"
-              letterSpacing="wider"
-              textTransform="uppercase"
-              color="#1B4D3E"
-            >
-              Our Photos
-            </Heading>
-            <Text fontSize={{ base: "lg", md: "xl" }} color="gray.600" maxW="2xl">
-              A collection of our favorite memories together. From our first adventures
-              to recent moments, these photos tell the story of our love.
-            </Text>
-          </VStack>
-        
-        <SimpleGrid columns={{ base: 1, sm: 2, md: 3 }} spacing={6} w="full">
+          <SlideUp>
+            <VStack spacing={6}>
+              <Heading
+                as="h1"
+                fontSize={{ base: "3xl", md: "5xl" }}
+                fontWeight="300"
+                letterSpacing="wider"
+                textTransform="uppercase"
+                color="#1B4D3E"
+              >
+                Our Photos
+              </Heading>
+              <Text fontSize={{ base: "lg", md: "xl" }} color="gray.600" maxW="2xl">
+                A collection of our favorite memories together. From our first adventures
+                to recent moments, these photos tell the story of our love.
+              </Text>
+            </VStack>
+          </SlideUp>
+
+        <FadeIn delay={0.3}>
+          <SimpleGrid columns={{ base: 1, sm: 2, md: 3 }} spacing={6} w="full">
           {photos.map((photo) => (
             <Box
               key={photo.id}
@@ -55,14 +59,17 @@ function Photos() {
               />
             </Box>
           ))}
-        </SimpleGrid>
+          </SimpleGrid>
+        </FadeIn>
 
+        <SlideUp delay={0.6}>
           <Box textAlign="center" mt={8}>
             <Text color="gray.600" fontStyle="italic">
               More photos coming soon! We'll be adding engagement photos and other
               special moments as we get closer to the big day.
             </Text>
           </Box>
+        </SlideUp>
         </VStack>
       </Container>
     </Box>

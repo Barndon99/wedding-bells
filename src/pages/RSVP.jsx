@@ -13,6 +13,7 @@ import {
   useToast 
 } from '@chakra-ui/react'
 import { useState } from 'react'
+import { SlideUp, FadeIn } from '../components/AnimatedSection'
 
 function RSVP() {
   const [formData, setFormData] = useState({
@@ -48,24 +49,27 @@ function RSVP() {
     <Box minH="100vh" bg="#f0f3dc">
       <Container maxW="container.lg" py={16}>
         <VStack spacing={12} align="center" textAlign="center">
-          <VStack spacing={6}>
-            <Heading
-              as="h1"
-              fontSize={{ base: "3xl", md: "5xl" }}
-              fontWeight="300"
-              letterSpacing="wider"
-              textTransform="uppercase"
-              color="#1B4D3E"
-            >
-              RSVP
-            </Heading>
-            <Text fontSize={{ base: "lg", md: "xl" }} color="gray.600" maxW="2xl">
-              We can't wait to celebrate with you! Please respond by May 1st, 2024
-            </Text>
-          </VStack>
+          <SlideUp>
+            <VStack spacing={6}>
+              <Heading
+                as="h1"
+                fontSize={{ base: "3xl", md: "5xl" }}
+                fontWeight="300"
+                letterSpacing="wider"
+                textTransform="uppercase"
+                color="#1B4D3E"
+              >
+                RSVP
+              </Heading>
+              <Text fontSize={{ base: "lg", md: "xl" }} color="gray.600" maxW="2xl">
+                We can't wait to celebrate with you! Please respond by May 1st, 2024
+              </Text>
+            </VStack>
+          </SlideUp>
 
-          <Box w="full" maxW="2xl">
-            <Box bg="white" p={8} borderRadius="lg" shadow="lg">
+          <FadeIn delay={0.3}>
+            <Box w="full" maxW="2xl">
+              <Box bg="white" p={8} borderRadius="lg" shadow="lg">
               <form onSubmit={handleSubmit}>
                 <VStack spacing={6}>
                   <FormControl isRequired>
@@ -170,16 +174,19 @@ function RSVP() {
                 </VStack>
               </form>
             </Box>
-          </Box>
+            </Box>
+          </FadeIn>
 
-          <VStack spacing={4} textAlign="center" maxW="2xl">
-            <Text fontSize="lg" color="gray.600" fontWeight="500">
-              Questions about the wedding?
-            </Text>
-            <Text fontSize="md" color="gray.500">
-              Contact us at <Text as="span" color="#1B4D3E" fontWeight="500">hello@grahamandkat.com</Text> or call <Text as="span" color="#1B4D3E" fontWeight="500">(555) 123-4567</Text>
-            </Text>
-          </VStack>
+          <SlideUp delay={0.6}>
+            <VStack spacing={4} textAlign="center" maxW="2xl">
+              <Text fontSize="lg" color="gray.600" fontWeight="500">
+                Questions about the wedding?
+              </Text>
+              <Text fontSize="md" color="gray.500">
+                Contact us at <Text as="span" color="#1B4D3E" fontWeight="500">hello@grahamandkat.com</Text> or call <Text as="span" color="#1B4D3E" fontWeight="500">(555) 123-4567</Text>
+              </Text>
+            </VStack>
+          </SlideUp>
         </VStack>
       </Container>
     </Box>

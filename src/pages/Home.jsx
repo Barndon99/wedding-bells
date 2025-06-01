@@ -8,6 +8,7 @@ import {
   Button,
   SimpleGrid
 } from '@chakra-ui/react'
+import { SlideUp, FadeIn, SlideInLeft, SlideInRight, StaggerContainer, StaggerItem } from '../components/AnimatedSection'
 
 function Home() {
   return (
@@ -36,38 +37,44 @@ function Home() {
         {/* Hero Content */}
         <VStack spacing={6} textAlign="center" position="relative" zIndex={1} color="white">
           {/* Small dots decoration */}
-          <HStack spacing={2} mb={4}>
-            <Box w={2} h={2} bg="white" borderRadius="full" />
-            <Box w={2} h={2} bg="white" borderRadius="full" />
-            <Box w={2} h={2} bg="white" borderRadius="full" />
-          </HStack>
+          <FadeIn delay={0.2}>
+            <HStack spacing={2} mb={4}>
+              <Box w={2} h={2} bg="white" borderRadius="full" />
+              <Box w={2} h={2} bg="white" borderRadius="full" />
+              <Box w={2} h={2} bg="white" borderRadius="full" />
+            </HStack>
+          </FadeIn>
 
-          <Heading
-            as="h1"
-            fontSize={{ base: "4xl", md: "6xl" }}
-            fontWeight="300"
-            letterSpacing="wider"
-            textTransform="uppercase"
-            mb="60px"
-          >
-            Graham & Katarina
-          </Heading>
+          <SlideUp delay={0.4}>
+            <Heading
+              as="h1"
+              fontSize={{ base: "4xl", md: "6xl" }}
+              fontWeight="300"
+              letterSpacing="wider"
+              textTransform="uppercase"
+              mb="60px"
+            >
+              Graham & Katarina
+            </Heading>
+          </SlideUp>
 
-          <Button
-            bg="white"
-            color="gray.800"
-            px={8}
-            py={4}
-            borderRadius="full"
-            fontSize="sm"
-            letterSpacing="wider"
-            textTransform="uppercase"
-            _hover={{ bg: "gray.100" }}
-          >
-            Save the Date • June 15, 2024
-          </Button>
+          <SlideUp delay={0.6}>
+            <Button
+              bg="white"
+              color="gray.800"
+              px={8}
+              py={4}
+              borderRadius="full"
+              fontSize="sm"
+              letterSpacing="wider"
+              textTransform="uppercase"
+              _hover={{ bg: "gray.100" }}
+            >
+              Save the Date • June 15, 2024
+            </Button>
+          </SlideUp>
 
-          <Box>
+          <SlideUp delay={0.8}>
             <Button
               variant="outline"
               borderColor="white"
@@ -82,7 +89,7 @@ function Home() {
             >
               RSVP
             </Button>
-          </Box>
+          </SlideUp>
         </VStack>
       </Box>
 
@@ -97,59 +104,69 @@ function Home() {
           {/* Left Column - Wedding Details */}
           <Box p={{ base: 8, lg: 16 }} display="flex" alignItems="center">
             <VStack align="start" spacing={{ base: 6, lg: 8 }} w="full">
-              <Heading
-                fontSize={{ base: "3xl", lg: "4xl" }}
-                fontWeight="300"
-                fontStyle="italic"
-                letterSpacing="wider"
-                textTransform="uppercase"
-                color="white"
-                mb={{ base: 6, lg: 8 }}
-              >
-                Wedding Details
-              </Heading>
+              <SlideInLeft>
+                <Heading
+                  fontSize={{ base: "3xl", lg: "4xl" }}
+                  fontWeight="300"
+                  fontStyle="italic"
+                  letterSpacing="wider"
+                  textTransform="uppercase"
+                  color="white"
+                  mb={{ base: 6, lg: 8 }}
+                >
+                  Wedding Details
+                </Heading>
+              </SlideInLeft>
 
-              <VStack align="start" spacing={{ base: 6, lg: 8 }} w="full">
-                <Box>
-                  <Text fontSize={{ base: "sm", lg: "md" }} letterSpacing="wider" textTransform="uppercase" mb={3} color="white">
-                    Date
-                  </Text>
-                  <Text fontSize={{ base: "lg", lg: "xl" }} color="white" mb={2}>December 10th, 2022</Text>
-                  <Text fontSize={{ base: "md", lg: "lg" }} color="white">5:00pm - 10:30pm</Text>
-                </Box>
+              <StaggerContainer>
+                <StaggerItem>
+                  <Box>
+                    <Text fontSize={{ base: "sm", lg: "md" }} letterSpacing="wider" textTransform="uppercase" mb={3} color="white">
+                      Date
+                    </Text>
+                    <Text fontSize={{ base: "lg", lg: "xl" }} color="white" mb={2}>December 10th, 2022</Text>
+                    <Text fontSize={{ base: "md", lg: "lg" }} color="white">5:00pm - 10:30pm</Text>
+                  </Box>
+                </StaggerItem>
 
-                <Box>
-                  <Text fontSize={{ base: "sm", lg: "md" }} letterSpacing="wider" textTransform="uppercase" mb={3} color="white">
-                    Reception Location
-                  </Text>
-                  <Text fontSize={{ base: "lg", lg: "xl" }} color="white" mb={2}>858 Phelan Court</Text>
-                  <Text fontSize={{ base: "md", lg: "lg" }} color="white">Camarillo, CA 93010</Text>
-                </Box>
+                <StaggerItem>
+                  <Box>
+                    <Text fontSize={{ base: "sm", lg: "md" }} letterSpacing="wider" textTransform="uppercase" mb={3} color="white">
+                      Reception Location
+                    </Text>
+                    <Text fontSize={{ base: "lg", lg: "xl" }} color="white" mb={2}>858 Phelan Court</Text>
+                    <Text fontSize={{ base: "md", lg: "lg" }} color="white">Camarillo, CA 93010</Text>
+                  </Box>
+                </StaggerItem>
 
-                <Box>
-                  <Text fontSize={{ base: "sm", lg: "md" }} letterSpacing="wider" textTransform="uppercase" mb={3} color="white">
-                    Dress
-                  </Text>
-                  <Text fontSize={{ base: "lg", lg: "xl" }} color="white" mb={2}>Formal | Cocktail</Text>
-                </Box>
-              </VStack>
+                <StaggerItem>
+                  <Box>
+                    <Text fontSize={{ base: "sm", lg: "md" }} letterSpacing="wider" textTransform="uppercase" mb={3} color="white">
+                      Dress
+                    </Text>
+                    <Text fontSize={{ base: "lg", lg: "xl" }} color="white" mb={2}>Formal | Cocktail</Text>
+                  </Box>
+                </StaggerItem>
+              </StaggerContainer>
             </VStack>
           </Box>
 
           {/* Right Column - Additional Info */}
           <Box p={{ base: 8, lg: 16 }} display="flex" alignItems="center">
             <VStack align="start" spacing={{ base: 6, lg: 8 }} w="full">
-              <Heading
-                fontSize={{ base: "2xl", lg: "3xl" }}
-                fontWeight="300"
-                fontStyle="italic"
-                letterSpacing="wider"
-                textTransform="uppercase"
-                color="white"
-                mb={{ base: 6, lg: 8 }}
-              >
-                A Note from the Bride & Groom
-              </Heading>
+              <SlideInRight>
+                <Heading
+                  fontSize={{ base: "2xl", lg: "3xl" }}
+                  fontWeight="300"
+                  fontStyle="italic"
+                  letterSpacing="wider"
+                  textTransform="uppercase"
+                  color="white"
+                  mb={{ base: 6, lg: 8 }}
+                >
+                  A Note from the Bride & Groom
+                </Heading>
+              </SlideInRight>
 
               <VStack align="start" spacing={{ base: 6, lg: 8 }} w="full">
                 <Text color="white" fontSize={{ base: "md", lg: "lg" }} lineHeight="relaxed">
@@ -195,18 +212,19 @@ function Home() {
         <Box bg="#f0f3dc" p={16} order={{ base: 2, lg: 1 }}>
           <VStack spacing={12} align="start">
             {/* Getting There */}
-            <Box>
-              <Heading
-                fontSize={{ base: "2xl", lg: "3xl" }}
-                fontWeight="300"
-                fontStyle="italic"
-                letterSpacing="wider"
-                textTransform="uppercase"
-                mb={{ base: 6, lg: 8 }}
-                color="gray.800"
-              >
-                Getting There
-              </Heading>
+            <SlideUp>
+              <Box>
+                <Heading
+                  fontSize={{ base: "2xl", lg: "3xl" }}
+                  fontWeight="300"
+                  fontStyle="italic"
+                  letterSpacing="wider"
+                  textTransform="uppercase"
+                  mb={{ base: 6, lg: 8 }}
+                  color="gray.800"
+                >
+                  Getting There
+                </Heading>
 
               <SimpleGrid columns={2} spacing={{ base: 6, lg: 8 }}>
                 <Box>
@@ -311,7 +329,8 @@ function Home() {
                   </Text>
                 </Box>
               </SimpleGrid>
-            </Box>
+              </Box>
+            </SlideUp>
           </VStack>
         </Box>
       </SimpleGrid>
