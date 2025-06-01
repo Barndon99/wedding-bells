@@ -62,7 +62,7 @@ function RSVP() {
                 RSVP
               </Heading>
               <Text fontSize={{ base: "lg", md: "xl" }} color="gray.600" maxW="2xl">
-                We can't wait to celebrate with you! Please respond by May 1st, 2024
+                We can't wait to celebrate with you! Please respond by August 2026
               </Text>
             </VStack>
           </SlideUp>
@@ -183,7 +183,7 @@ function RSVP() {
                 Questions about the wedding?
               </Text>
               <Text fontSize="md" color="gray.500">
-                Contact us at <Text as="span" color="#1B4D3E" fontWeight="500">hello@grahamandkat.com</Text> or call <Text as="span" color="#1B4D3E" fontWeight="500">(555) 123-4567</Text>
+                Contact us at <Text as="span" color="#1B4D3E" fontWeight="500">kgjantz@gmail.com</Text> or call <Text as="span" color="#1B4D3E" fontWeight="500">(555) 123-4567</Text>
               </Text>
             </VStack>
           </SlideUp>

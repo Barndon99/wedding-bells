@@ -70,7 +70,7 @@ function Home() {
               textTransform="uppercase"
               _hover={{ bg: "gray.100" }}
             >
-              Save the Date • June 15, 2024
+              Save the Date • September 2026
             </Button>
           </SlideUp>
 
@@ -143,7 +143,7 @@ function Home() {
                     <Text fontSize={{ base: "sm", lg: "md" }} letterSpacing="wider" textTransform="uppercase" mb={3} color="white">
                       Date
                     </Text>
-                    <Text fontSize={{ base: "lg", lg: "xl" }} color="white" mb={2}>December 10th, 2022</Text>
+                    <Text fontSize={{ base: "lg", lg: "xl" }} color="white" mb={2}>September 2026</Text>
                     <Text fontSize={{ base: "md", lg: "lg" }} color="white">5:00pm - 10:30pm</Text>
                   </Box>
                 </StaggerItem>
@@ -196,7 +196,7 @@ function Home() {
                 </Text>
 
                 <Text color="white" fontSize={{ base: "md", lg: "lg" }} lineHeight="relaxed">
-                  Please join us in celebration at our reception December 10th, at
+                  Please join us in celebration at our reception in September 2026, at
                   5:00pm, following our intimate mountain ceremony.
                 </Text>
 
@@ -240,6 +240,7 @@ function Home() {
                   letterSpacing="wider"
                   textTransform="uppercase"
                   mb={{ base: 6, lg: 8 }}
+                  pt={{ base: 4, lg: 6 }}
                   color="gray.800"
                 >
                   Getting There
@@ -369,18 +370,20 @@ function Home() {
         <Box bg="#f0f3dc" p={16} order={{ base: 2, lg: 2 }}>
           <VStack spacing={12} align="start">
             {/* Activities & Entertainment */}
-            <Box>
-              <Heading
-                fontSize={{ base: "2xl", lg: "3xl" }}
-                fontWeight="300"
-                fontStyle="italic"
-                letterSpacing="wider"
-                textTransform="uppercase"
-                mb={{ base: 6, lg: 8 }}
-                color="gray.800"
-              >
-                Activities & Entertainment
-              </Heading>
+            <SlideUp>
+              <Box>
+                <Heading
+                  fontSize={{ base: "2xl", lg: "3xl" }}
+                  fontWeight="300"
+                  fontStyle="italic"
+                  letterSpacing="wider"
+                  textTransform="uppercase"
+                  mb={{ base: 6, lg: 8 }}
+                  pt={{ base: 4, lg: 6 }}
+                  color="gray.800"
+                >
+                  Activities & Entertainment
+                </Heading>
 
               <SimpleGrid columns={2} spacing={{ base: 6, lg: 8 }}>
                 <Box>
@@ -458,7 +461,8 @@ function Home() {
                   </Text>
                 </Box>
               </SimpleGrid>
-            </Box>
+              </Box>
+            </SlideUp>
           </VStack>
         </Box>
       </SimpleGrid>
@@ -478,18 +482,20 @@ function Home() {
         <Box bg="#f0f3dc" p={16} order={{ base: 2, lg: 1 }}>
           <VStack spacing={12} align="start">
             {/* Local Attractions */}
-            <Box>
-              <Heading
-                fontSize={{ base: "2xl", lg: "3xl" }}
-                fontWeight="300"
-                fontStyle="italic"
-                letterSpacing="wider"
-                textTransform="uppercase"
-                mb={{ base: 6, lg: 8 }}
-                color="gray.800"
-              >
-                Local Attractions
-              </Heading>
+            <SlideUp>
+              <Box>
+                <Heading
+                  fontSize={{ base: "2xl", lg: "3xl" }}
+                  fontWeight="300"
+                  fontStyle="italic"
+                  letterSpacing="wider"
+                  textTransform="uppercase"
+                  mb={{ base: 6, lg: 8 }}
+                  pt={{ base: 4, lg: 6 }}
+                  color="gray.800"
+                >
+                  Local Attractions
+                </Heading>
 
               <SimpleGrid columns={2} spacing={{ base: 6, lg: 8 }}>
                 <Box>
@@ -563,11 +569,12 @@ function Home() {
                     Questions
                   </Text>
                   <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" lineHeight="relaxed">
-                    Email us at hello@grahamandkat.com
+                    Email us at kgjantz@gmail.com
                   </Text>
                 </Box>
               </SimpleGrid>
-            </Box>
+              </Box>
+            </SlideUp>
           </VStack>
         </Box>
       </SimpleGrid>

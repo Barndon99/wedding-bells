@@ -61,7 +61,7 @@ function Footer() {
               Graham & Kat
             </Heading>
             <Text fontSize="sm" color="gray.400">
-              June 15, 2024
+              September 2026
             </Text>
             <Text fontSize="sm" color="gray.400">
               Celebrating love, family, and new beginnings
@@ -144,7 +144,7 @@ function Footer() {
                 Wedding Planner
               </Text>
               <Text fontSize="sm" color="gray.400">
-                contact@weddingplanner.com
+                kgjantz@gmail.com
               </Text>
               <Text fontSize="sm" color="gray.400">
                 (555) 123-4567
@@ -174,7 +174,7 @@ function Footer() {
         {/* Bottom Section */}
         <HStack justify="space-between" align="center" flexWrap="wrap">
           <Text fontSize="sm" color="gray.400">
-            © 2024 Graham & Kat. Made with ❤️ for our special day.
+            © 2026 Graham & Kat. Made with ❤️ for our special day.
           </Text>
           <HStack spacing={4}>
             <Text fontSize="sm" color="gray.400">
