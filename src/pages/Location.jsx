@@ -10,33 +10,38 @@ import {
   HStack,
   Divider
 } from '@chakra-ui/react'
+import { SlideUp, FadeIn, StaggerContainer, StaggerItem } from '../components/AnimatedSection'
 
 function Location() {
   return (
     <Box minH="100vh" bg="#f0f3dc">
       <Container maxW="container.lg" py={16}>
         <VStack spacing={12} align="center" textAlign="center">
-          <VStack spacing={6}>
-            <Heading
-              as="h1"
-              fontSize={{ base: "3xl", md: "5xl" }}
-              fontWeight="300"
-              letterSpacing="wider"
-              textTransform="uppercase"
-              color="#1B4D3E"
-            >
-              Location & Directions
-            </Heading>
-            <Text fontSize={{ base: "lg", md: "xl" }} color="gray.600" maxW="2xl">
-              Join us at our beautiful venue in Camarillo, California
-            </Text>
-          </VStack>
+          <SlideUp>
+            <VStack spacing={6}>
+              <Heading
+                as="h1"
+                fontSize={{ base: "3xl", md: "5xl" }}
+                fontWeight="300"
+                letterSpacing="wider"
+                textTransform="uppercase"
+                color="#1B4D3E"
+              >
+                Location & Directions
+              </Heading>
+              <Text fontSize={{ base: "lg", md: "xl" }} color="gray.600" maxW="2xl">
+                Join us at our beautiful venue in Camarillo, California
+              </Text>
+            </VStack>
+          </SlideUp>
 
           {/* Venue Information */}
-          <Box w="full" maxW="4xl">
-            <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={8}>
-              {/* Ceremony */}
-              <Box bg="white" p={8} borderRadius="lg" shadow="lg">
+          <StaggerContainer>
+            <Box w="full" maxW="4xl">
+              <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={8}>
+                {/* Ceremony */}
+                <StaggerItem>
+                  <Box bg="white" p={8} borderRadius="lg" shadow="lg">
                 <VStack spacing={6} align="start">
                   <Heading
                     fontSize={{ base: "xl", md: "2xl" }}
@@ -73,11 +78,13 @@ function Location() {
                   >
                     Get Directions
                   </Button>
-                </VStack>
-              </Box>
+                  </VStack>
+                  </Box>
+                </StaggerItem>
 
-              {/* Reception */}
-              <Box bg="white" p={8} borderRadius="lg" shadow="lg">
+                {/* Reception */}
+                <StaggerItem>
+                  <Box bg="white" p={8} borderRadius="lg" shadow="lg">
                 <VStack spacing={6} align="start">
                   <Heading
                     fontSize={{ base: "xl", md: "2xl" }}
@@ -114,111 +121,127 @@ function Location() {
                   >
                     Get Directions
                   </Button>
-                </VStack>
-              </Box>
-            </SimpleGrid>
-          </Box>
+                  </VStack>
+                  </Box>
+                </StaggerItem>
+              </SimpleGrid>
+            </Box>
+          </StaggerContainer>
 
           <Divider borderColor="gray.300" />
 
           {/* Travel Information */}
-          <Box w="full" maxW="4xl">
-            <VStack spacing={8}>
-              <Heading
-                fontSize={{ base: "2xl", md: "3xl" }}
-                fontWeight="300"
-                fontStyle="italic"
-                letterSpacing="wider"
-                textTransform="uppercase"
-                color="#1B4D3E"
-              >
-                Travel Information
-              </Heading>
+          <SlideUp delay={0.3}>
+            <Box w="full" maxW="4xl">
+              <VStack spacing={8}>
+                <Heading
+                  fontSize={{ base: "2xl", md: "3xl" }}
+                  fontWeight="300"
+                  fontStyle="italic"
+                  letterSpacing="wider"
+                  textTransform="uppercase"
+                  color="#1B4D3E"
+                >
+                  Travel Information
+                </Heading>
 
-              <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8} w="full">
-                {/* Parking */}
-                <Box bg="white" p={6} borderRadius="lg" shadow="md">
-                  <VStack spacing={4} align="start">
-                    <Heading fontSize="lg" color="#1B4D3E" fontWeight="500">
-                      Parking
-                    </Heading>
-                    <Text fontSize="md" color="gray.600">
-                      Free parking is available on-site. Additional street parking is available on Camarillo Ranch Road.
-                    </Text>
-                  </VStack>
-                </Box>
+                <StaggerContainer>
+                  <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8} w="full">
+                    {/* Parking */}
+                    <StaggerItem>
+                      <Box bg="white" p={6} borderRadius="lg" shadow="md">
+                        <VStack spacing={4} align="start">
+                          <Heading fontSize="lg" color="#1B4D3E" fontWeight="500">
+                            Parking
+                          </Heading>
+                          <Text fontSize="md" color="gray.600">
+                            Free parking is available on-site. Additional street parking is available on Camarillo Ranch Road.
+                          </Text>
+                        </VStack>
+                      </Box>
+                    </StaggerItem>
 
-                {/* Transportation */}
-                <Box bg="white" p={6} borderRadius="lg" shadow="md">
-                  <VStack spacing={4} align="start">
-                    <Heading fontSize="lg" color="#1B4D3E" fontWeight="500">
-                      Transportation
-                    </Heading>
-                    <Text fontSize="md" color="gray.600">
-                      Uber and Lyft are readily available. We recommend arranging transportation if you plan to enjoy the open bar!
-                    </Text>
-                  </VStack>
-                </Box>
+                    {/* Transportation */}
+                    <StaggerItem>
+                      <Box bg="white" p={6} borderRadius="lg" shadow="md">
+                        <VStack spacing={4} align="start">
+                          <Heading fontSize="lg" color="#1B4D3E" fontWeight="500">
+                            Transportation
+                          </Heading>
+                          <Text fontSize="md" color="gray.600">
+                            Uber and Lyft are readily available. We recommend arranging transportation if you plan to enjoy the open bar!
+                          </Text>
+                        </VStack>
+                      </Box>
+                    </StaggerItem>
 
-                {/* Nearby Hotels */}
-                <Box bg="white" p={6} borderRadius="lg" shadow="md">
-                  <VStack spacing={4} align="start">
-                    <Heading fontSize="lg" color="#1B4D3E" fontWeight="500">
-                      Nearby Hotels
-                    </Heading>
-                    <VStack spacing={2} align="start">
-                      <Text fontSize="sm" color="gray.600">
-                        <strong>Hampton Inn & Suites</strong><br />
-                        2.5 miles away
-                      </Text>
-                      <Text fontSize="sm" color="gray.600">
-                        <strong>Sonesta Select Camarillo</strong><br />
-                        3.1 miles away
-                      </Text>
-                    </VStack>
-                  </VStack>
-                </Box>
+                    {/* Nearby Hotels */}
+                    <StaggerItem>
+                      <Box bg="white" p={6} borderRadius="lg" shadow="md">
+                        <VStack spacing={4} align="start">
+                          <Heading fontSize="lg" color="#1B4D3E" fontWeight="500">
+                            Nearby Hotels
+                          </Heading>
+                          <VStack spacing={2} align="start">
+                            <Text fontSize="sm" color="gray.600">
+                              <strong>Hampton Inn & Suites</strong><br />
+                              2.5 miles away
+                            </Text>
+                            <Text fontSize="sm" color="gray.600">
+                              <strong>Sonesta Select Camarillo</strong><br />
+                              3.1 miles away
+                            </Text>
+                          </VStack>
+                        </VStack>
+                      </Box>
+                    </StaggerItem>
 
-                {/* Airport Information */}
-                <Box bg="white" p={6} borderRadius="lg" shadow="md">
-                  <VStack spacing={4} align="start">
-                    <Heading fontSize="lg" color="#1B4D3E" fontWeight="500">
-                      Airports
-                    </Heading>
-                    <VStack spacing={2} align="start">
-                      <Text fontSize="sm" color="gray.600">
-                        <strong>LAX:</strong> 1 hour drive<br />
-                        <strong>Burbank:</strong> 45 minutes drive
-                      </Text>
-                    </VStack>
-                  </VStack>
-                </Box>
-              </SimpleGrid>
-            </VStack>
-          </Box>
-
-          {/* Map Placeholder */}
-          <Box w="full" maxW="4xl">
-            <Box 
-              bg="gray.200" 
-              h="300px" 
-              borderRadius="lg" 
-              display="flex" 
-              alignItems="center" 
-              justifyContent="center"
-              border="2px dashed"
-              borderColor="gray.400"
-            >
-              <VStack spacing={2}>
-                <Text fontSize="lg" color="gray.500" fontWeight="500">
-                  Interactive Map
-                </Text>
-                <Text fontSize="sm" color="gray.400">
-                  Map integration coming soon
-                </Text>
+                    {/* Airport Information */}
+                    <StaggerItem>
+                      <Box bg="white" p={6} borderRadius="lg" shadow="md">
+                        <VStack spacing={4} align="start">
+                          <Heading fontSize="lg" color="#1B4D3E" fontWeight="500">
+                            Airports
+                          </Heading>
+                          <VStack spacing={2} align="start">
+                            <Text fontSize="sm" color="gray.600">
+                              <strong>LAX:</strong> 1 hour drive<br />
+                              <strong>Burbank:</strong> 45 minutes drive
+                            </Text>
+                          </VStack>
+                        </VStack>
+                      </Box>
+                    </StaggerItem>
+                  </SimpleGrid>
+                </StaggerContainer>
               </VStack>
             </Box>
-          </Box>
+          </SlideUp>
+
+          {/* Map Placeholder */}
+          <FadeIn delay={0.6}>
+            <Box w="full" maxW="4xl">
+              <Box
+                bg="gray.200"
+                h="300px"
+                borderRadius="lg"
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                border="2px dashed"
+                borderColor="gray.400"
+              >
+                <VStack spacing={2}>
+                  <Text fontSize="lg" color="gray.500" fontWeight="500">
+                    Interactive Map
+                  </Text>
+                  <Text fontSize="sm" color="gray.400">
+                    Map integration coming soon
+                  </Text>
+                </VStack>
+              </Box>
+            </Box>
+          </FadeIn>
         </VStack>
       </Container>
     </Box>
