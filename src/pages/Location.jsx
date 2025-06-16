@@ -30,7 +30,7 @@ function Location() {
                 Location & Directions
               </Heading>
               <Text fontSize={{ base: "lg", md: "xl" }} color="gray.600" maxW="2xl">
-                Join us at our beautiful venue in Camarillo, California
+                Join us at our beautiful venue in Fosciandora, Italy
               </Text>
             </VStack>
           </SlideUp>
@@ -56,11 +56,10 @@ function Location() {
                   
                   <VStack spacing={3} align="start">
                     <Text fontSize="lg" fontWeight="500" color="gray.800">
-                      Camarillo Ranch House
+                      Fosciandora
                     </Text>
                     <Text fontSize="md" color="gray.600">
-                      201 Camarillo Ranch Rd<br />
-                      Camarillo, CA 93012
+                      Comune di Fosciandora
                     </Text>
                     <Text fontSize="md" color="gray.600">
                       <strong>Time:</strong> 4:00 PM
@@ -69,7 +68,7 @@ function Location() {
 
                   <Button
                     as={Link}
-                    href="https://maps.google.com/?q=201+Camarillo+Ranch+Rd,+Camarillo,+CA+93012"
+                    href="https://maps.google.com/?q=201+Fosciandora+Ranch+Rd,+Fosciandora,+Italy+93012"
                     isExternal
                     bg="#1B4D3E"
                     color="white"
@@ -99,11 +98,10 @@ function Location() {
                   
                   <VStack spacing={3} align="start">
                     <Text fontSize="lg" fontWeight="500" color="gray.800">
-                      Camarillo Ranch House
+                      Fosciandora Villa
                     </Text>
                     <Text fontSize="md" color="gray.600">
-                      201 Camarillo Ranch Rd<br />
-                      Camarillo, CA 93012
+                      Province of Lucca, Tuscany, Italy
                     </Text>
                     <Text fontSize="md" color="gray.600">
                       <strong>Time:</strong> 5:30 PM - 11:00 PM
@@ -112,7 +110,7 @@ function Location() {
 
                   <Button
                     as={Link}
-                    href="https://maps.google.com/?q=201+Camarillo+Ranch+Rd,+Camarillo,+CA+93012"
+                    href="https://maps.google.com/?q=201+Fosciandora+Ranch+Rd,+Fosciandora,+Italy+93012"
                     isExternal
                     bg="#1B4D3E"
                     color="white"
@@ -155,7 +153,7 @@ function Location() {
                             Parking
                           </Heading>
                           <Text fontSize="md" color="gray.600">
-                            Free parking is available on-site. Additional street parking is available on Camarillo Ranch Road.
+                            Free parking is available on-site. Additional street parking is available on Fosciandora
                           </Text>
                         </VStack>
                       </Box>
@@ -188,7 +186,7 @@ function Location() {
                               2.5 miles away
                             </Text>
                             <Text fontSize="sm" color="gray.600">
-                              <strong>Sonesta Select Camarillo</strong><br />
+                              <strong>Sonesta Select Fosciandora</strong><br />
                               3.1 miles away
                             </Text>
                           </VStack>
@@ -217,31 +215,6 @@ function Location() {
               </VStack>
             </Box>
           </SlideUp>
-
-          {/* Map Placeholder */}
-          <FadeIn delay={0.6}>
-            <Box w="full" maxW="4xl">
-              <Box
-                bg="gray.200"
-                h="300px"
-                borderRadius="lg"
-                display="flex"
-                alignItems="center"
-                justifyContent="center"
-                border="2px dashed"
-                borderColor="gray.400"
-              >
-                <VStack spacing={2}>
-                  <Text fontSize="lg" color="gray.500" fontWeight="500">
-                    Interactive Map
-                  </Text>
-                  <Text fontSize="sm" color="gray.400">
-                    Map integration coming soon
-                  </Text>
-                </VStack>
-              </Box>
-            </Box>
-          </FadeIn>
         </VStack>
       </Container>
     </Box>

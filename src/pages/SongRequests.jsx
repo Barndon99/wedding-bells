@@ -33,11 +33,27 @@ function SongRequests() {
     }))
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    // Here you would typically send the data to your backend
-    console.log('Song request submitted:', formData)
-    
+const handleSubmit = async (e) => {
+  e.preventDefault()
+
+  const payload = {
+    "Timestamp": new Date(),
+    "Name": formData.name,
+    "Email": formData.email,
+    "Song Title": formData.songTitle,
+    "Artist": formData.artist,
+    "Special Note": formData.specialNote
+  }
+
+  try {
+    await fetch("https://api.sheetbest.com/sheets/e9b5d76a-56f5-4c80-8f83-6c46adcc4251", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(payload)
+    })
+
     toast({
       title: "Song request submitted!",
       description: "Thank you for your song suggestion. We'll add it to our playlist!",
@@ -46,7 +62,6 @@ function SongRequests() {
       isClosable: true,
     })
 
-    // Reset form
     setFormData({
       name: '',
       email: '',
@@ -54,7 +69,17 @@ function SongRequests() {
       artist: '',
       specialNote: ''
     })
+  } catch (error) {
+    console.error("Song request failed:", error)
+    toast({
+      title: "Submission Failed",
+      description: "Something went wrong. Please try again later.",
+      status: "error",
+      duration: 5000,
+      isClosable: true,
+    })
   }
+}
 
   return (
     <Box minH="100vh" bg="#f0f3dc">

@@ -26,6 +26,9 @@ importers:
       react:
         specifier: ^19.1.0
         version: 19.1.0
+      react-countdown:
+        specifier: ^2.3.6
+        version: 2.3.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       react-dom:
         specifier: ^19.1.0
         version: 19.1.0(react@19.1.0)
@@ -1074,6 +1077,12 @@ packages:
     resolution: {integrity: sha512-ma2FePH0z3px2+WOu6h+YycZcEvFmmxIlAb62cF52bG86eMySciO/EQZeQMXd07kPCYB0a1dWDT5J+KE9mCDUw==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc
+
+  react-countdown@2.3.6:
+    resolution: {integrity: sha512-ZfX6S08Hb6x6W6eCn1hMDvxPICI/T30fd+gaeVTCR/2cGZ2WJ3f26e4ImNIMX1fHkopJrUdnRpWXP13/D39+gg==}
+    peerDependencies:
+      react: '>= 15'
+      react-dom: '>= 15'
 
   react-dom@19.1.0:
     resolution: {integrity: sha512-Xs1hdnE+DyKgeHJeJznQmYMIBG3TKIHJJT95Q58nHLSrElKlGQqDTR2HQ9fx5CN/Gk6Vh/kupBTDLU11/nDk/g==}
@@ -2285,6 +2294,12 @@ snapshots:
     dependencies:
       '@babel/runtime': 7.27.4
       react: 19.1.0
+
+  react-countdown@2.3.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
+    dependencies:
+      prop-types: 15.8.1
+      react: 19.1.0
+      react-dom: 19.1.0(react@19.1.0)
 
   react-dom@19.1.0(react@19.1.0):
     dependencies:
