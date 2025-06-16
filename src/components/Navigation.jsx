@@ -57,7 +57,7 @@ function Navigation() {
     <Box bg="white" px={4} shadow="sm" position="sticky" top={0} zIndex={1000}>
       <Flex h={16} alignItems="center" justifyContent="space-between">
         <Heading as={RouterLink} to="/" size="md" color="#1B4D3E" _hover={{ textDecoration: 'none' }}>
-          Graham & Katarina
+          Katarina & Graham
         </Heading>
 
         <HStack spacing={8} alignItems="center">
@@ -87,7 +87,7 @@ function Navigation() {
           <DrawerCloseButton />
           <DrawerHeader borderBottomWidth="1px">
             <Heading size="md" color="#1B4D3E">
-              Graham & Katarina
+              Katarina & Graham
             </Heading>
           </DrawerHeader>
           <DrawerBody>

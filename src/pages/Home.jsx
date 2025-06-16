@@ -4,12 +4,12 @@ import {
   Text,
   VStack,
   HStack,
-  Container,
   Button,
   SimpleGrid
 } from '@chakra-ui/react'
 import { SlideUp, FadeIn, SlideInLeft, SlideInRight, StaggerContainer, StaggerItem } from '../components/AnimatedSection'
-
+import CountdownDisplay from '../components/CountdownDisplay'
+import Countdown from 'react-countdown';
 function Home() {
   return (
     <Box>
@@ -38,11 +38,10 @@ function Home() {
         <VStack spacing={6} textAlign="center" position="relative" zIndex={1} color="white">
           {/* Small dots decoration */}
           <FadeIn delay={0.2}>
-            <HStack spacing={2} mb={4}>
-              <Box w={2} h={2} bg="white" borderRadius="full" />
-              <Box w={2} h={2} bg="white" borderRadius="full" />
-              <Box w={2} h={2} bg="white" borderRadius="full" />
-            </HStack>
+            <Countdown
+              date={'2026-09-14T11:00:00'}
+              renderer={({ days, hours, minutes, seconds }) => <CountdownDisplay days={days} hours={hours} minutes={minutes} seconds={seconds}/>}
+            />
           </FadeIn>
 
           <SlideUp delay={0.4}>
@@ -54,7 +53,7 @@ function Home() {
               textTransform="uppercase"
               mb="60px"
             >
-              Graham & Katarina
+              Katarina & Graham
             </Heading>
           </SlideUp>
 
@@ -70,7 +69,7 @@ function Home() {
               textTransform="uppercase"
               _hover={{ bg: "gray.100" }}
             >
-              Save the Date • September 2026
+              Save the Date • September 14, 2026
             </Button>
           </SlideUp>
 
@@ -143,7 +142,7 @@ function Home() {
                     <Text fontSize={{ base: "sm", lg: "md" }} letterSpacing="wider" textTransform="uppercase" mb={3} color="white">
                       Date
                     </Text>
-                    <Text fontSize={{ base: "lg", lg: "xl" }} color="white" mb={2}>September 2026</Text>
+                    <Text fontSize={{ base: "lg", lg: "xl" }} color="white" mb={2}>September 14, 2026</Text>
                     <Text fontSize={{ base: "md", lg: "lg" }} color="white">5:00pm - 10:30pm</Text>
                   </Box>
                 </StaggerItem>
@@ -154,7 +153,7 @@ function Home() {
                       Reception Location
                     </Text>
                     <Text fontSize={{ base: "lg", lg: "xl" }} color="white" mb={2}>858 Phelan Court</Text>
-                    <Text fontSize={{ base: "md", lg: "lg" }} color="white">Camarillo, CA 93010</Text>
+                    <Text fontSize={{ base: "md", lg: "lg" }} color="white">Fosciandora, Italy 93010</Text>
                   </Box>
                 </StaggerItem>
 
@@ -196,7 +195,7 @@ function Home() {
                 </Text>
 
                 <Text color="white" fontSize={{ base: "md", lg: "lg" }} lineHeight="relaxed">
-                  Please join us in celebration at our reception in September 2026, at
+                  Please join us in celebration at our reception in September 14, 2026, at
                   5:00pm, following our intimate mountain ceremony.
                 </Text>
 
@@ -208,7 +207,7 @@ function Home() {
 
                 <Text color="white" fontSize={{ base: "md", lg: "lg" }} mt={{ base: 6, lg: 8 }} fontStyle="italic">
                   With Love,<br />
-                  Graham and Katarina
+                  Katarina and Graham
                 </Text>
               </VStack>
             </VStack>
@@ -278,17 +277,18 @@ function Home() {
                 fontStyle="italic"
                 letterSpacing="wider"
                 textTransform="uppercase"
-                mb={{ base: 6, lg: 8 }}
+                mb={{ base: 4, lg: 6 }}
+                mt="15px"
                 color="gray.800"
               >
                 Where to Stay
               </Heading>
 
               <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" mb={3} lineHeight="relaxed">
-                Hampton Inn & Suites, Camarillo or Thousand Oaks
+                Hampton Inn & Suites, Fosciandora or Thousand Oaks
               </Text>
               <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" lineHeight="relaxed">
-                <Text as="span" textDecoration="underline">Sonesta Select Camarillo</Text> | <Text as="span" textDecoration="underline">Air BnB</Text> | <Text as="span" textDecoration="underline">Vrbo</Text>
+                <Text as="span" textDecoration="underline">Sonesta Select Fosciandora</Text> | <Text as="span" textDecoration="underline">Air BnB</Text> | <Text as="span" textDecoration="underline">Vrbo</Text>
               </Text>
             </Box>
 
@@ -300,7 +300,8 @@ function Home() {
                 fontStyle="italic"
                 letterSpacing="wider"
                 textTransform="uppercase"
-                mb={{ base: 6, lg: 8 }}
+                mt="15px"
+                mb={{ base: 4, lg: 6 }}
                 color="gray.800"
               >
                 Great Food & Drinks
@@ -414,7 +415,8 @@ function Home() {
                 fontStyle="italic"
                 letterSpacing="wider"
                 textTransform="uppercase"
-                mb={{ base: 6, lg: 8 }}
+                mt="15px"
+                mb={{ base: 4, lg: 6 }}
                 color="gray.800"
               >
                 Gift Registry
@@ -436,7 +438,8 @@ function Home() {
                 fontStyle="italic"
                 letterSpacing="wider"
                 textTransform="uppercase"
-                mb={{ base: 6, lg: 8 }}
+                mt="15px"
+                mb={{ base: 4, lg: 6 }}
                 color="gray.800"
               >
                 Special Requests
@@ -526,7 +529,8 @@ function Home() {
                 fontStyle="italic"
                 letterSpacing="wider"
                 textTransform="uppercase"
-                mb={{ base: 6, lg: 8 }}
+                mt="15px"
+                mb={{ base: 4, lg: 6 }}
                 color="gray.800"
               >
                 Weekend Itinerary
@@ -548,7 +552,8 @@ function Home() {
                 fontStyle="italic"
                 letterSpacing="wider"
                 textTransform="uppercase"
-                mb={{ base: 6, lg: 8 }}
+                mt="15px"
+                mb={{ base: 4, lg: 6 }}
                 color="gray.800"
               >
                 Contact Information

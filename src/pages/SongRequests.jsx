@@ -13,6 +13,7 @@ import {
   useToast
 } from '@chakra-ui/react'
 import { useState } from 'react'
+import { SlideUp, FadeIn } from '../components/AnimatedSection'
 
 function SongRequests() {
   const [formData, setFormData] = useState({
@@ -32,11 +33,27 @@ function SongRequests() {
     }))
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    // Here you would typically send the data to your backend
-    console.log('Song request submitted:', formData)
-    
+const handleSubmit = async (e) => {
+  e.preventDefault()
+
+  const payload = {
+    "Timestamp": new Date(),
+    "Name": formData.name,
+    "Email": formData.email,
+    "Song Title": formData.songTitle,
+    "Artist": formData.artist,
+    "Special Note": formData.specialNote
+  }
+
+  try {
+    await fetch("https://api.sheetbest.com/sheets/e9b5d76a-56f5-4c80-8f83-6c46adcc4251", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(payload)
+    })
+
     toast({
       title: "Song request submitted!",
       description: "Thank you for your song suggestion. We'll add it to our playlist!",
@@ -45,7 +62,6 @@ function SongRequests() {
       isClosable: true,
     })
 
-    // Reset form
     setFormData({
       name: '',
       email: '',
@@ -53,32 +69,45 @@ function SongRequests() {
       artist: '',
       specialNote: ''
     })
+  } catch (error) {
+    console.error("Song request failed:", error)
+    toast({
+      title: "Submission Failed",
+      description: "Something went wrong. Please try again later.",
+      status: "error",
+      duration: 5000,
+      isClosable: true,
+    })
   }
+}
 
   return (
     <Box minH="100vh" bg="#f0f3dc">
       <Container maxW="container.lg" py={16}>
         <VStack spacing={12} align="center" textAlign="center">
-          <VStack spacing={6}>
-            <Heading
-              as="h1"
-              fontSize={{ base: "3xl", md: "5xl" }}
-              fontWeight="300"
-              letterSpacing="wider"
-              textTransform="uppercase"
-              color="#1B4D3E"
-            >
-              Song Requests
-            </Heading>
-            <Text fontSize={{ base: "lg", md: "xl" }} color="gray.600" maxW="2xl">
-              Help us create the perfect playlist for our special day! 
-              Share your favorite songs that will get everyone on the dance floor.
-            </Text>
-          </VStack>
+          <SlideUp>
+            <VStack spacing={6}>
+              <Heading
+                as="h1"
+                fontSize={{ base: "3xl", md: "5xl" }}
+                fontWeight="300"
+                letterSpacing="wider"
+                textTransform="uppercase"
+                color="#1B4D3E"
+              >
+                Song Requests
+              </Heading>
+              <Text fontSize={{ base: "lg", md: "xl" }} color="gray.600" maxW="2xl">
+                Help us create the perfect playlist for our special day!
+                Share your favorite songs that will get everyone on the dance floor.
+              </Text>
+            </VStack>
+          </SlideUp>
 
-          <Box w="full" maxW="2xl">
-            <Box bg="white" p={8} borderRadius="lg" shadow="lg">
-              <form onSubmit={handleSubmit}>
+          <FadeIn delay={0.3}>
+            <Box w="full" maxW="2xl">
+              <Box bg="white" p={8} borderRadius="lg" shadow="lg">
+                <form onSubmit={handleSubmit}>
                 <VStack spacing={6}>
                   <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6} w="full">
                     <FormControl isRequired>
@@ -157,29 +186,32 @@ function SongRequests() {
                     Submit Song Request
                   </Button>
                 </VStack>
-              </form>
+                </form>
+              </Box>
             </Box>
-          </Box>
+          </FadeIn>
 
-          <VStack spacing={4} textAlign="center" maxW="2xl">
-            <Text fontSize="lg" color="gray.600" fontWeight="500">
-              Popular Requests So Far:
-            </Text>
-            <SimpleGrid columns={{ base: 1, md: 2 }} spacing={4} w="full">
-              <Text fontSize="md" color="gray.500">
-                "Can't Help Myself" - Four Tops
+          <SlideUp delay={0.6}>
+            <VStack spacing={4} textAlign="center" maxW="2xl">
+              <Text fontSize="lg" color="gray.600" fontWeight="500">
+                Popular Requests So Far:
               </Text>
-              <Text fontSize="md" color="gray.500">
-                "September" - Earth, Wind & Fire
-              </Text>
-              <Text fontSize="md" color="gray.500">
-                "I Wanna Dance with Somebody" - Whitney Houston
-              </Text>
-              <Text fontSize="md" color="gray.500">
-                "Mr. Brightside" - The Killers
-              </Text>
-            </SimpleGrid>
-          </VStack>
+              <SimpleGrid columns={{ base: 1, md: 2 }} spacing={4} w="full">
+                <Text fontSize="md" color="gray.500">
+                  "Can't Help Myself" - Four Tops
+                </Text>
+                <Text fontSize="md" color="gray.500">
+                  "September" - Earth, Wind & Fire
+                </Text>
+                <Text fontSize="md" color="gray.500">
+                  "I Wanna Dance with Somebody" - Whitney Houston
+                </Text>
+                <Text fontSize="md" color="gray.500">
+                  "Mr. Brightside" - The Killers
+                </Text>
+              </SimpleGrid>
+            </VStack>
+          </SlideUp>
         </VStack>
       </Container>
     </Box>

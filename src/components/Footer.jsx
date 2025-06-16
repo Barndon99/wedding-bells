@@ -58,10 +58,10 @@ function Footer() {
               letterSpacing="wider"
               textTransform="uppercase"
             >
-              Graham & Kat
+              Katarina & Graham
             </Heading>
             <Text fontSize="sm" color="gray.400">
-              September 2026
+              September 14, 2026
             </Text>
             <Text fontSize="sm" color="gray.400">
               Celebrating love, family, and new beginnings
@@ -141,13 +141,10 @@ function Footer() {
             </Heading>
             <VStack align="start" spacing={2}>
               <Text fontSize="sm" color="gray.300">
-                Wedding Planner
+                Bride and Groom
               </Text>
               <Text fontSize="sm" color="gray.400">
                 kgjantz@gmail.com
-              </Text>
-              <Text fontSize="sm" color="gray.400">
-                (555) 123-4567
               </Text>
             </VStack>
           </VStack>
@@ -174,7 +171,7 @@ function Footer() {
         {/* Bottom Section */}
         <HStack justify="space-between" align="center" flexWrap="wrap">
           <Text fontSize="sm" color="gray.400">
-            © 2026 Graham & Kat. Made with ❤️ for our special day.
+            © 2026 Katarina & Graham. Made with ❤️ for our special day.
           </Text>
           <HStack spacing={4}>
             <Text fontSize="sm" color="gray.400">

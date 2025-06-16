@@ -26,9 +26,28 @@ function RSVP() {
   })
   const toast = useToast()
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    // TODO: Implement RSVP submission logic
+const handleSubmit = async (e) => {
+  e.preventDefault()
+
+  const payload = {
+    "Timestamp": new Date(),
+    "Name": formData.name,
+    "Email": formData.email,
+    "Attendance": formData.attendance,
+    "Guests": formData.guests,
+    "Dietary Restrictions": formData.dietaryRestrictions,
+    "Message": formData.message
+  }
+
+  try {
+    await fetch("https://api.sheetbest.com/sheets/244811a3-f818-4d64-a75c-63bf14a62bb6", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(payload)
+    })
+
     toast({
       title: "RSVP Submitted!",
       description: "Thank you for your response. We can't wait to celebrate with you!",
@@ -36,7 +55,26 @@ function RSVP() {
       duration: 5000,
       isClosable: true,
     })
+
+    setFormData({
+      name: '',
+      email: '',
+      attendance: '',
+      guests: '1',
+      dietaryRestrictions: '',
+      message: ''
+    })
+  } catch (error) {
+    console.error("Submission failed:", error)
+    toast({
+      title: "Submission Failed",
+      description: "There was a problem submitting your RSVP. Please try again later.",
+      status: "error",
+      duration: 5000,
+      isClosable: true,
+    })
   }
+}
 
   const handleChange = (e) => {
     setFormData({
