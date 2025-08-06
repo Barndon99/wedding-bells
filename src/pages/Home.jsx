@@ -10,7 +10,9 @@ import {
 import { SlideUp, FadeIn, SlideInLeft, SlideInRight, StaggerContainer, StaggerItem } from '../components/AnimatedSection'
 import CountdownDisplay from '../components/CountdownDisplay'
 import Countdown from 'react-countdown';
+import { useNavigate } from 'react-router-dom';
 function Home() {
+  const navigate = useNavigate()
   return (
     <Box>
       {/* Hero Section */}
@@ -85,6 +87,7 @@ function Home() {
               letterSpacing="wider"
               textTransform="uppercase"
               _hover={{ bg: "whiteAlpha.200" }}
+              onClick={() => navigate('/rsvp')}
             >
               RSVP
             </Button>
@@ -93,7 +96,7 @@ function Home() {
       </Box>
 
       {/* Wedding Details Section */}
-      <Box bg="#1B4D3E" color="white" h={{ base: "auto", lg: "620px" }} position="relative">
+      <Box bg="#5e4e33" color="white" h={{ base: "auto", lg: "620px" }} position="relative">
         {/* Pineapple decoration */}
         <Box
           position="absolute"
@@ -143,7 +146,7 @@ function Home() {
                       Date
                     </Text>
                     <Text fontSize={{ base: "lg", lg: "xl" }} color="white" mb={2}>September 14, 2026</Text>
-                    <Text fontSize={{ base: "md", lg: "lg" }} color="white">5:00pm - 10:30pm</Text>
+                    <Text fontSize={{ base: "md", lg: "lg" }} color="white">11:00am - 1:00pm</Text>
                   </Box>
                 </StaggerItem>
 
@@ -152,8 +155,8 @@ function Home() {
                     <Text fontSize={{ base: "sm", lg: "md" }} letterSpacing="wider" textTransform="uppercase" mb={3} color="white">
                       Reception Location
                     </Text>
-                    <Text fontSize={{ base: "lg", lg: "xl" }} color="white" mb={2}>858 Phelan Court</Text>
-                    <Text fontSize={{ base: "md", lg: "lg" }} color="white">Fosciandora, Italy 93010</Text>
+                    <Text fontSize={{ base: "lg", lg: "xl" }} color="white" mb={2}>55020 Ceserana LU</Text>
+                    <Text fontSize={{ base: "md", lg: "lg" }} color="white">Via Santa Maria, Italy </Text>
                   </Box>
                 </StaggerItem>
 
@@ -195,13 +198,12 @@ function Home() {
                 </Text>
 
                 <Text color="white" fontSize={{ base: "md", lg: "lg" }} lineHeight="relaxed">
-                  Please join us in celebration at our reception in September 14, 2026, at
-                  5:00pm, following our intimate mountain ceremony.
+                  Please join us in celebration at our reception in September 14, 2026, following our intimate ceremony.
                 </Text>
 
                 <Text color="white" fontSize={{ base: "md", lg: "lg" }} lineHeight="relaxed">
                   Each one of you has played an important role in our story, and we are
-                  excited to have you as witnesses as we step into this God journey
+                  excited to have you as witnesses as we step into this journey
                   together.
                 </Text>
 
@@ -251,10 +253,10 @@ function Home() {
                     By Car
                   </Text>
                   <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" lineHeight="relaxed">
-                    1 Hour Drive from DTLA
+                    1 Hour 15 Minute Drive from Pisa (PSA-Galileo Galilei) Airport
                   </Text>
                   <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" lineHeight="relaxed">
-                    5 Hour Drive from San Diego
+                    1 hour 25 Minute Drive from Florence (Amerigo Vespucci) Airport
                   </Text>
                 </Box>
 
@@ -263,7 +265,7 @@ function Home() {
                     By Flight
                   </Text>
                   <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" lineHeight="relaxed">
-                    We recommend flying into Los Angeles International Airport or Burbank
+                    We recommend flying into Florence (Amerigo Vespucci) Airport or Pisa (PSA-Galileo Galilei) Airport
                   </Text>
                 </Box>
               </SimpleGrid>
@@ -285,14 +287,20 @@ function Home() {
               </Heading>
 
               <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" mb={3} lineHeight="relaxed">
-                Hampton Inn & Suites, Fosciandora or Thousand Oaks
+                Campo Collina
               </Text>
               <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" lineHeight="relaxed">
-                <Text as="span" textDecoration="underline">Sonesta Select Fosciandora</Text> | <Text as="span" textDecoration="underline">Air BnB</Text> | <Text as="span" textDecoration="underline">Vrbo</Text>
+                <Text as="span" textDecoration="underline">Località Campo, 3, 55020 Fosciandora LU, Italy</Text>
+              </Text>
+              <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" mb={3} lineHeight="relaxed">
+                La Rupina
+              </Text>
+              <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" lineHeight="relaxed">
+                <Text as="span" textDecoration="underline">Località Rupina, 17, 55020 Fosciandora LU, Italy</Text>
               </Text>
             </Box>
 
-            {/* Great Food & Drinks */}
+            {/* Nearby Restaurants */}
             <Box>
               <Heading
                 fontSize={{ base: "2xl", lg: "3xl" }}
@@ -304,7 +312,7 @@ function Home() {
                 mb={{ base: 4, lg: 6 }}
                 color="gray.800"
               >
-                Great Food & Drinks
+                Nearby Restaurants
               </Heading>
 
               <SimpleGrid columns={2} spacing={{ base: 6, lg: 8 }}>
@@ -313,16 +321,10 @@ function Home() {
                     Coffee
                   </Text>
                   <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" lineHeight="relaxed" mb={2}>
-                    Cafe Ficelle
+                    L'Orcello
                   </Text>
                   <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" lineHeight="relaxed" mb={2}>
-                    Ragamuffin Coffee Roasters
-                  </Text>
-                  <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" lineHeight="relaxed" mb={2}>
-                    Ten Speed Coffee
-                  </Text>
-                  <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" lineHeight="relaxed">
-                    Frontside Cafe
+                    Il Pozzo
                   </Text>
                 </Box>
 
@@ -331,22 +333,13 @@ function Home() {
                     Good Grub
                   </Text>
                   <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" lineHeight="relaxed" mb={2}>
-                    Twenty88 Bistro
+                    Bar Ristorante Il Ponte di Ceserana
                   </Text>
                   <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" lineHeight="relaxed" mb={2}>
-                    BLVD Burger
+                    Ristorante Pizzeria Il Triti 
                   </Text>
                   <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" lineHeight="relaxed" mb={2}>
-                    Silverlake Ramen
-                  </Text>
-                  <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" lineHeight="relaxed" mb={2}>
-                    Luv n Eat Thai
-                  </Text>
-                  <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" lineHeight="relaxed" mb={2}>
-                    Sushi Fujiya
-                  </Text>
-                  <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" lineHeight="relaxed">
-                    Institution Ale
+                    Teatro Alfieri 
                   </Text>
                 </Box>
               </SimpleGrid>
@@ -372,40 +365,6 @@ function Home() {
           <VStack spacing={12} align="start">
             {/* Activities & Entertainment */}
             <SlideUp>
-              <Box>
-                <Heading
-                  fontSize={{ base: "2xl", lg: "3xl" }}
-                  fontWeight="300"
-                  fontStyle="italic"
-                  letterSpacing="wider"
-                  textTransform="uppercase"
-                  mb={{ base: 6, lg: 8 }}
-                  pt={{ base: 4, lg: 6 }}
-                  color="gray.800"
-                >
-                  Activities & Entertainment
-                </Heading>
-
-              <SimpleGrid columns={2} spacing={{ base: 6, lg: 8 }}>
-                <Box>
-                  <Text fontSize={{ base: "md", lg: "lg" }} letterSpacing="wider" textTransform="uppercase" mb={3} color="gray.800" fontWeight="500">
-                    Live Music
-                  </Text>
-                  <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" lineHeight="relaxed">
-                    Acoustic performances throughout the evening with local artists
-                  </Text>
-                </Box>
-
-                <Box>
-                  <Text fontSize={{ base: "md", lg: "lg" }} letterSpacing="wider" textTransform="uppercase" mb={3} color="gray.800" fontWeight="500">
-                    Dancing
-                  </Text>
-                  <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" lineHeight="relaxed">
-                    Open dance floor with DJ playing your favorite hits
-                  </Text>
-                </Box>
-              </SimpleGrid>
-            </Box>
 
             {/* Gift Registry */}
             <Box>
@@ -426,125 +385,11 @@ function Home() {
                 Your presence is the greatest gift of all
               </Text>
               <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" lineHeight="relaxed">
-                For those who wish to give, we've registered at <Text as="span" textDecoration="underline">Williams Sonoma</Text> and <Text as="span" textDecoration="underline">Crate & Barrel</Text>
+                For those who wish to give, we've setting up a registry with details to follow.
               </Text>
             </Box>
 
             {/* Special Requests */}
-            <Box>
-              <Heading
-                fontSize={{ base: "2xl", lg: "3xl" }}
-                fontWeight="300"
-                fontStyle="italic"
-                letterSpacing="wider"
-                textTransform="uppercase"
-                mt="15px"
-                mb={{ base: 4, lg: 6 }}
-                color="gray.800"
-              >
-                Special Requests
-              </Heading>
-
-              <SimpleGrid columns={2} spacing={{ base: 6, lg: 8 }}>
-                <Box>
-                  <Text fontSize={{ base: "md", lg: "lg" }} letterSpacing="wider" textTransform="uppercase" mb={3} color="gray.800" fontWeight="500">
-                    Photography
-                  </Text>
-                  <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" lineHeight="relaxed">
-                    Please share your photos with #GrahamAndKat
-                  </Text>
-                </Box>
-
-                <Box>
-                  <Text fontSize={{ base: "md", lg: "lg" }} letterSpacing="wider" textTransform="uppercase" mb={3} color="gray.800" fontWeight="500">
-                    Unplugged Ceremony
-                  </Text>
-                  <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" lineHeight="relaxed">
-                    Please keep phones and cameras away during the ceremony
-                  </Text>
-                </Box>
-              </SimpleGrid>
-              </Box>
-            </SlideUp>
-          </VStack>
-        </Box>
-      </SimpleGrid>
-
-      {/* Third Section - Text 3/5, Image 2/5 */}
-      <SimpleGrid columns={{ base: 1, lg: 2 }} templateColumns={{ base: "1fr", lg: "3fr 2fr" }} minH="20vh">
-        {/* Image - First on mobile, Right on desktop */}
-        <Box
-          backgroundImage="url('/assets/sitting.jpg')"
-          backgroundSize="cover"
-          backgroundPosition="center"
-          minH="20vh"
-          order={{ base: 1, lg: 2 }}
-        />
-
-        {/* Text - Second on mobile, Left on desktop */}
-        <Box bg="#f0f3dc" p={16} order={{ base: 2, lg: 1 }}>
-          <VStack spacing={12} align="start">
-            {/* Local Attractions */}
-            <SlideUp>
-              <Box>
-                <Heading
-                  fontSize={{ base: "2xl", lg: "3xl" }}
-                  fontWeight="300"
-                  fontStyle="italic"
-                  letterSpacing="wider"
-                  textTransform="uppercase"
-                  mb={{ base: 6, lg: 8 }}
-                  pt={{ base: 4, lg: 6 }}
-                  color="gray.800"
-                >
-                  Local Attractions
-                </Heading>
-
-              <SimpleGrid columns={2} spacing={{ base: 6, lg: 8 }}>
-                <Box>
-                  <Text fontSize={{ base: "md", lg: "lg" }} letterSpacing="wider" textTransform="uppercase" mb={3} color="gray.800" fontWeight="500">
-                    Historic Sites
-                  </Text>
-                  <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" lineHeight="relaxed">
-                    Explore the charming downtown area with vintage shops and galleries
-                  </Text>
-                </Box>
-
-                <Box>
-                  <Text fontSize={{ base: "md", lg: "lg" }} letterSpacing="wider" textTransform="uppercase" mb={3} color="gray.800" fontWeight="500">
-                    Nature Walks
-                  </Text>
-                  <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" lineHeight="relaxed">
-                    Beautiful hiking trails with ocean views just minutes away
-                  </Text>
-                </Box>
-              </SimpleGrid>
-            </Box>
-
-            {/* Weekend Itinerary */}
-            <Box>
-              <Heading
-                fontSize={{ base: "2xl", lg: "3xl" }}
-                fontWeight="300"
-                fontStyle="italic"
-                letterSpacing="wider"
-                textTransform="uppercase"
-                mt="15px"
-                mb={{ base: 4, lg: 6 }}
-                color="gray.800"
-              >
-                Weekend Itinerary
-              </Heading>
-
-              <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" mb={3} lineHeight="relaxed">
-                Friday: Welcome drinks at the hotel bar
-              </Text>
-              <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" lineHeight="relaxed">
-                Saturday: Ceremony at 4pm, reception to follow until midnight
-              </Text>
-            </Box>
-
-            {/* Contact Information */}
             <Box>
               <Heading
                 fontSize={{ base: "2xl", lg: "3xl" }}
@@ -562,19 +407,10 @@ function Home() {
               <SimpleGrid columns={2} spacing={{ base: 6, lg: 8 }}>
                 <Box>
                   <Text fontSize={{ base: "md", lg: "lg" }} letterSpacing="wider" textTransform="uppercase" mb={3} color="gray.800" fontWeight="500">
-                    Wedding Planner
+                    Email us at: 
                   </Text>
                   <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" lineHeight="relaxed">
-                    Sarah Johnson - (555) 123-4567
-                  </Text>
-                </Box>
-
-                <Box>
-                  <Text fontSize={{ base: "md", lg: "lg" }} letterSpacing="wider" textTransform="uppercase" mb={3} color="gray.800" fontWeight="500">
-                    Questions
-                  </Text>
-                  <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" lineHeight="relaxed">
-                    Email us at kgjantz@gmail.com
+                    kgjantz@gmail.com
                   </Text>
                 </Box>
               </SimpleGrid>

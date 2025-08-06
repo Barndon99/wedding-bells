@@ -13,7 +13,7 @@ import { Link as RouterLink } from 'react-router-dom'
 
 function Footer() {
   return (
-    <Box bg="#1B4D3E" color="white" py={16} position="relative" overflow="hidden">
+    <Box bg="#5e4e33" color="white" py={16} position="relative" overflow="hidden">
       {/* Pineapple decorations */}
       <Box
         position="absolute"

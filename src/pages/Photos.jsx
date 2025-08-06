@@ -24,7 +24,7 @@ function Photos() {
                 fontWeight="300"
                 letterSpacing="wider"
                 textTransform="uppercase"
-                color="#1B4D3E"
+                color="#5e4e33"
               >
                 Our Photos
               </Heading>
