@@ -18,7 +18,6 @@ import { SlideUp, FadeIn } from '../components/AnimatedSection'
 function SongRequests() {
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
     songTitle: '',
     artist: '',
     specialNote: ''
@@ -39,7 +38,6 @@ const handleSubmit = async (e) => {
   const payload = {
     "Timestamp": new Date(),
     "Name": formData.name,
-    "Email": formData.email,
     "Song Title": formData.songTitle,
     "Artist": formData.artist,
     "Special Note": formData.specialNote
@@ -60,11 +58,11 @@ const handleSubmit = async (e) => {
       status: "success",
       duration: 5000,
       isClosable: true,
+      position: "top"
     })
 
     setFormData({
       name: '',
-      email: '',
       songTitle: '',
       artist: '',
       specialNote: ''
@@ -77,6 +75,7 @@ const handleSubmit = async (e) => {
       status: "error",
       duration: 5000,
       isClosable: true,
+      position: 'top'
     })
   }
 }
@@ -93,9 +92,9 @@ const handleSubmit = async (e) => {
                 fontWeight="300"
                 letterSpacing="wider"
                 textTransform="uppercase"
-                color="#1B4D3E"
+                color="#5e4e33"
               >
-                Song Requests
+                Song Suggestions
               </Heading>
               <Text fontSize={{ base: "lg", md: "xl" }} color="gray.600" maxW="2xl">
                 Help us create the perfect playlist for our special day!
@@ -109,7 +108,7 @@ const handleSubmit = async (e) => {
               <Box bg="white" p={8} borderRadius="lg" shadow="lg">
                 <form onSubmit={handleSubmit}>
                 <VStack spacing={6}>
-                  <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6} w="full">
+                  <SimpleGrid columns={{ base: 1, md: 1}} spacing={6} w="full">
                     <FormControl isRequired>
                       <FormLabel color="gray.700" fontWeight="500">Your Name</FormLabel>
                       <Input
@@ -117,23 +116,10 @@ const handleSubmit = async (e) => {
                         value={formData.name}
                         onChange={handleInputChange}
                         placeholder="Enter your name"
-                        focusBorderColor="#1B4D3E"
-                      />
-                    </FormControl>
-
-                    <FormControl isRequired>
-                      <FormLabel color="gray.700" fontWeight="500">Email</FormLabel>
-                      <Input
-                        name="email"
-                        type="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        placeholder="Enter your email"
-                        focusBorderColor="#1B4D3E"
+                        focusBorderColor="#5e4e33"
                       />
                     </FormControl>
                   </SimpleGrid>
-
                   <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6} w="full">
                     <FormControl isRequired>
                       <FormLabel color="gray.700" fontWeight="500">Song Title</FormLabel>
@@ -142,7 +128,7 @@ const handleSubmit = async (e) => {
                         value={formData.songTitle}
                         onChange={handleInputChange}
                         placeholder="Enter song title"
-                        focusBorderColor="#1B4D3E"
+                        focusBorderColor="#5e4e33"
                       />
                     </FormControl>
 
@@ -153,7 +139,7 @@ const handleSubmit = async (e) => {
                         value={formData.artist}
                         onChange={handleInputChange}
                         placeholder="Enter artist name"
-                        focusBorderColor="#1B4D3E"
+                        focusBorderColor="#5e4e33"
                       />
                     </FormControl>
                   </SimpleGrid>
@@ -166,13 +152,13 @@ const handleSubmit = async (e) => {
                       onChange={handleInputChange}
                       placeholder="Tell us why this song is special to you or when you'd like it played..."
                       rows={4}
-                      focusBorderColor="#1B4D3E"
+                      focusBorderColor="#5e4e33"
                     />
                   </FormControl>
 
                   <Button
                     type="submit"
-                    bg="#1B4D3E"
+                    bg="#5e4e33"
                     color="white"
                     size="lg"
                     px={8}

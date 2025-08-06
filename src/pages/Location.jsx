@@ -25,7 +25,7 @@ function Location() {
                 fontWeight="300"
                 letterSpacing="wider"
                 textTransform="uppercase"
-                color="#1B4D3E"
+                color="#5e4e33"
               >
                 Location & Directions
               </Heading>
@@ -49,7 +49,7 @@ function Location() {
                     fontStyle="italic"
                     letterSpacing="wider"
                     textTransform="uppercase"
-                    color="#1B4D3E"
+                    color="#5e4e33"
                   >
                     Ceremony
                   </Heading>
@@ -70,7 +70,7 @@ function Location() {
                     as={Link}
                     href="https://maps.google.com/?q=201+Fosciandora+Ranch+Rd,+Fosciandora,+Italy+93012"
                     isExternal
-                    bg="#1B4D3E"
+                    bg="#5e4e33"
                     color="white"
                     size="md"
                     _hover={{ bg: "#0F3A2E", textDecoration: 'none' }}
@@ -91,7 +91,7 @@ function Location() {
                     fontStyle="italic"
                     letterSpacing="wider"
                     textTransform="uppercase"
-                    color="#1B4D3E"
+                    color="#5e4e33"
                   >
                     Reception
                   </Heading>
@@ -112,7 +112,7 @@ function Location() {
                     as={Link}
                     href="https://maps.google.com/?q=201+Fosciandora+Ranch+Rd,+Fosciandora,+Italy+93012"
                     isExternal
-                    bg="#1B4D3E"
+                    bg="#5e4e33"
                     color="white"
                     size="md"
                     _hover={{ bg: "#0F3A2E", textDecoration: 'none' }}
@@ -138,7 +138,7 @@ function Location() {
                   fontStyle="italic"
                   letterSpacing="wider"
                   textTransform="uppercase"
-                  color="#1B4D3E"
+                  color="#5e4e33"
                 >
                   Travel Information
                 </Heading>
@@ -149,62 +149,46 @@ function Location() {
                     <StaggerItem>
                       <Box bg="white" p={6} borderRadius="lg" shadow="md">
                         <VStack spacing={4} align="start">
-                          <Heading fontSize="lg" color="#1B4D3E" fontWeight="500">
+                          <Heading fontSize="lg" color="#5e4e33" fontWeight="500">
                             Parking
                           </Heading>
                           <Text fontSize="md" color="gray.600">
-                            Free parking is available on-site. Additional street parking is available on Fosciandora
+                            Free parking is available on-site.
                           </Text>
                         </VStack>
                       </Box>
                     </StaggerItem>
-
-                    {/* Transportation */}
-                    <StaggerItem>
-                      <Box bg="white" p={6} borderRadius="lg" shadow="md">
-                        <VStack spacing={4} align="start">
-                          <Heading fontSize="lg" color="#1B4D3E" fontWeight="500">
-                            Transportation
-                          </Heading>
-                          <Text fontSize="md" color="gray.600">
-                            Uber and Lyft are readily available. We recommend arranging transportation if you plan to enjoy the open bar!
-                          </Text>
-                        </VStack>
-                      </Box>
-                    </StaggerItem>
-
                     {/* Nearby Hotels */}
                     <StaggerItem>
                       <Box bg="white" p={6} borderRadius="lg" shadow="md">
                         <VStack spacing={4} align="start">
-                          <Heading fontSize="lg" color="#1B4D3E" fontWeight="500">
+                          <Heading fontSize="lg" color="#5e4e33" fontWeight="500">
                             Nearby Hotels
                           </Heading>
                           <VStack spacing={2} align="start">
                             <Text fontSize="sm" color="gray.600">
-                              <strong>Hampton Inn & Suites</strong><br />
-                              2.5 miles away
+                              <strong>Campo Collina</strong><br />
+                              Località Campo, 3, 55020 Fosciandora LU, Italy
                             </Text>
                             <Text fontSize="sm" color="gray.600">
-                              <strong>Sonesta Select Fosciandora</strong><br />
-                              3.1 miles away
+                              <strong>La Rupina</strong><br />
+                              Località Rupina, 17, 55020 Fosciandora LU, Italy
                             </Text>
                           </VStack>
                         </VStack>
                       </Box>
                     </StaggerItem>
-
                     {/* Airport Information */}
                     <StaggerItem>
                       <Box bg="white" p={6} borderRadius="lg" shadow="md">
                         <VStack spacing={4} align="start">
-                          <Heading fontSize="lg" color="#1B4D3E" fontWeight="500">
+                          <Heading fontSize="lg" color="#5e4e33" fontWeight="500">
                             Airports
                           </Heading>
                           <VStack spacing={2} align="start">
                             <Text fontSize="sm" color="gray.600">
-                              <strong>LAX:</strong> 1 hour drive<br />
-                              <strong>Burbank:</strong> 45 minutes drive
+                              <strong>Pisa (PSA-Galileo Galilei) Airport:</strong> 1 hour drive<br />
+                              <strong>Florence (Amerigo Vespucci) Airport:</strong> 1 1/2 hour drive
                             </Text>
                           </VStack>
                         </VStack>

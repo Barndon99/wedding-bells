@@ -95,7 +95,7 @@ const handleSubmit = async (e) => {
                 fontWeight="300"
                 letterSpacing="wider"
                 textTransform="uppercase"
-                color="#1B4D3E"
+                color="#5e4e33"
               >
                 RSVP
               </Heading>
@@ -117,7 +117,7 @@ const handleSubmit = async (e) => {
                       value={formData.name}
                       onChange={handleChange}
                       placeholder="Enter your full name"
-                      focusBorderColor="#1B4D3E"
+                      focusBorderColor="#5e4e33"
                       size="lg"
                     />
                   </FormControl>
@@ -130,7 +130,7 @@ const handleSubmit = async (e) => {
                       value={formData.email}
                       onChange={handleChange}
                       placeholder="Enter your email"
-                      focusBorderColor="#1B4D3E"
+                      focusBorderColor="#5e4e33"
                       size="lg"
                     />
                   </FormControl>
@@ -142,7 +142,7 @@ const handleSubmit = async (e) => {
                       value={formData.attendance}
                       onChange={handleChange}
                       placeholder="Select your response"
-                      focusBorderColor="#1B4D3E"
+                      focusBorderColor="#5e4e33"
                       size="lg"
                     >
                       <option value="yes">Yes, I'll be there! 🎉</option>
@@ -158,7 +158,7 @@ const handleSubmit = async (e) => {
                           name="guests"
                           value={formData.guests}
                           onChange={handleChange}
-                          focusBorderColor="#1B4D3E"
+                          focusBorderColor="#5e4e33"
                           size="lg"
                         >
                           <option value="1">Just me</option>
@@ -175,7 +175,7 @@ const handleSubmit = async (e) => {
                           value={formData.dietaryRestrictions}
                           onChange={handleChange}
                           placeholder="Any dietary restrictions or allergies?"
-                          focusBorderColor="#1B4D3E"
+                          focusBorderColor="#5e4e33"
                           size="lg"
                         />
                       </FormControl>
@@ -188,15 +188,15 @@ const handleSubmit = async (e) => {
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
-                      placeholder="Share a message, memory, or well wishes!"
+                      placeholder="Share advice, memories, or well wishes that will be shared with the couple on their wedding day."
                       rows={4}
-                      focusBorderColor="#1B4D3E"
+                      focusBorderColor="#5e4e33"
                     />
                   </FormControl>
 
                   <Button
                     type="submit"
-                    bg="#1B4D3E"
+                    bg="#5e4e33"
                     color="white"
                     size="lg"
                     w="full"
@@ -221,7 +221,7 @@ const handleSubmit = async (e) => {
                 Questions about the wedding?
               </Text>
               <Text fontSize="md" color="gray.500">
-                Contact us at <Text as="span" color="#1B4D3E" fontWeight="500">kgjantz@gmail.com</Text> or call <Text as="span" color="#1B4D3E" fontWeight="500">(555) 123-4567</Text>
+                Contact us at <Text as="span" color="#5e4e33" fontWeight="500">kgjantz@gmail.com</Text>
               </Text>
             </VStack>
           </SlideUp>
