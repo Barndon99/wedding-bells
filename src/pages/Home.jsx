@@ -122,13 +122,12 @@ function Home() {
           position="relative"
           zIndex={2}
         >
-          {/* Left Column - Wedding Details */}
-          <Box p={{ base: 8, lg: 16 }} display="flex" alignItems="center">
+          <Box p={{ base: 8, lg: 16 }} display="flex">
             <VStack align="start" spacing={{ base: 6, lg: 8 }} w="full">
               <SlideInLeft>
                 <Heading
-                  fontSize={{ base: "3xl", lg: "4xl" }}
-                  fontWeight="300"
+                  fontSize={{ base: "2xl", lg: "3xl" }}
+                  fontWeight="500"
                   fontStyle="italic"
                   letterSpacing="wider"
                   textTransform="uppercase"
@@ -138,34 +137,32 @@ function Home() {
                   Wedding Details
                 </Heading>
               </SlideInLeft>
-
               <StaggerContainer>
                 <StaggerItem>
-                  <Box>
-                    <Text fontSize={{ base: "sm", lg: "md" }} letterSpacing="wider" textTransform="uppercase" mb={3} color="white">
+                  <Box marginBottom={5}>
+                    <Text fontSize={{ base: "sm", lg: "md" }} fontWeight="bold" letterSpacing="wider" textTransform="uppercase" mb={2} color="white">
                       Date
                     </Text>
-                    <Text fontSize={{ base: "lg", lg: "xl" }} color="white" mb={2}>September 14, 2026</Text>
+                    <Text fontSize={{ base: "lg", lg: "xl" }} color="white">September 14, 2026</Text>
                     <Text fontSize={{ base: "md", lg: "lg" }} color="white">11:00am - 1:00pm</Text>
                   </Box>
                 </StaggerItem>
-
                 <StaggerItem>
-                  <Box>
-                    <Text fontSize={{ base: "sm", lg: "md" }} letterSpacing="wider" textTransform="uppercase" mb={3} color="white">
+                  <Box marginBottom={5}>
+                    <Text fontSize={{ base: "sm", lg: "md" }} fontWeight="bold" letterSpacing="wider" textTransform="uppercase" mb={2} color="white">
                       Reception Location
                     </Text>
-                    <Text fontSize={{ base: "lg", lg: "xl" }} color="white" mb={2}>55020 Ceserana LU</Text>
+                    <Text fontSize={{ base: "lg", lg: "xl" }} color="white" >55020 Ceserana LU</Text>
                     <Text fontSize={{ base: "md", lg: "lg" }} color="white">Via Santa Maria, Italy </Text>
                   </Box>
                 </StaggerItem>
 
                 <StaggerItem>
                   <Box>
-                    <Text fontSize={{ base: "sm", lg: "md" }} letterSpacing="wider" textTransform="uppercase" mb={3} color="white">
+                    <Text fontSize={{ base: "sm", lg: "md" }} letterSpacing="wider" fontWeight="bold" textTransform="uppercase" mb={2} color="white">
                       Dress
                     </Text>
-                    <Text fontSize={{ base: "lg", lg: "xl" }} color="white" mb={2}>Formal | Cocktail</Text>
+                    <Text fontSize={{ base: "lg", lg: "xl" }} color="white">Formal | Cocktail</Text>
                   </Box>
                 </StaggerItem>
               </StaggerContainer>
@@ -178,7 +175,7 @@ function Home() {
               <SlideInRight>
                 <Heading
                   fontSize={{ base: "2xl", lg: "3xl" }}
-                  fontWeight="300"
+                  fontWeight="500"
                   fontStyle="italic"
                   letterSpacing="wider"
                   textTransform="uppercase"
@@ -236,7 +233,7 @@ function Home() {
               <Box>
                 <Heading
                   fontSize={{ base: "2xl", lg: "3xl" }}
-                  fontWeight="300"
+                  fontWeight="500"
                   fontStyle="italic"
                   letterSpacing="wider"
                   textTransform="uppercase"
@@ -249,7 +246,7 @@ function Home() {
 
               <SimpleGrid columns={2} spacing={{ base: 6, lg: 8 }}>
                 <Box>
-                  <Text fontSize={{ base: "md", lg: "lg" }} letterSpacing="wider" textTransform="uppercase" mb={3} color="gray.800" fontWeight="500">
+                  <Text fontSize={{ base: "sm", lg: "md" }} fontWeight="bold" letterSpacing="wider" textTransform="uppercase" mb={2} color="gray.800">
                     By Car
                   </Text>
                   <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" lineHeight="relaxed">
@@ -261,7 +258,7 @@ function Home() {
                 </Box>
 
                 <Box>
-                  <Text fontSize={{ base: "md", lg: "lg" }} letterSpacing="wider" textTransform="uppercase" mb={3} color="gray.800" fontWeight="500">
+                  <Text fontSize={{ base: "sm", lg: "md" }} fontWeight="bold" letterSpacing="wider" textTransform="uppercase" mb={2} color="gray.800">
                     By Flight
                   </Text>
                   <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" lineHeight="relaxed">
@@ -275,7 +272,7 @@ function Home() {
             <Box>
               <Heading
                 fontSize={{ base: "2xl", lg: "3xl" }}
-                fontWeight="300"
+                fontWeight="500"
                 fontStyle="italic"
                 letterSpacing="wider"
                 textTransform="uppercase"
@@ -286,16 +283,16 @@ function Home() {
                 Where to Stay
               </Heading>
 
-              <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" mb={3} lineHeight="relaxed">
+              <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" mb={2} lineHeight="relaxed">
                 Campo Collina
               </Text>
-              <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" lineHeight="relaxed">
+              <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" mb={4} lineHeight="relaxed">
                 <Text as="span" textDecoration="underline">Località Campo, 3, 55020 Fosciandora LU, Italy</Text>
               </Text>
-              <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" mb={3} lineHeight="relaxed">
+              <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" mb={2} lineHeight="relaxed">
                 La Rupina
               </Text>
-              <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" lineHeight="relaxed">
+              <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" mb={2} lineHeight="relaxed">
                 <Text as="span" textDecoration="underline">Località Rupina, 17, 55020 Fosciandora LU, Italy</Text>
               </Text>
             </Box>
@@ -304,7 +301,7 @@ function Home() {
             <Box>
               <Heading
                 fontSize={{ base: "2xl", lg: "3xl" }}
-                fontWeight="300"
+                fontWeight="500"
                 fontStyle="italic"
                 letterSpacing="wider"
                 textTransform="uppercase"
@@ -317,7 +314,7 @@ function Home() {
 
               <SimpleGrid columns={2} spacing={{ base: 6, lg: 8 }}>
                 <Box>
-                  <Text fontSize={{ base: "md", lg: "lg" }} letterSpacing="wider" textTransform="uppercase" mb={3} color="gray.800" fontWeight="500">
+                 <Text fontSize={{ base: "sm", lg: "md" }} fontWeight="bold" letterSpacing="wider" textTransform="uppercase" mb={2} color="gray.800">
                     Coffee
                   </Text>
                   <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" lineHeight="relaxed" mb={2}>
@@ -329,7 +326,7 @@ function Home() {
                 </Box>
 
                 <Box>
-                  <Text fontSize={{ base: "md", lg: "lg" }} letterSpacing="wider" textTransform="uppercase" mb={3} color="gray.800" fontWeight="500">
+                  <Text fontSize={{ base: "sm", lg: "md" }} fontWeight="bold" letterSpacing="wider" textTransform="uppercase" mb={2} color="gray.800">
                     Good Grub
                   </Text>
                   <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" lineHeight="relaxed" mb={2}>
@@ -370,7 +367,7 @@ function Home() {
             <Box>
               <Heading
                 fontSize={{ base: "2xl", lg: "3xl" }}
-                fontWeight="300"
+                fontWeight="500"
                 fontStyle="italic"
                 letterSpacing="wider"
                 textTransform="uppercase"
@@ -385,7 +382,7 @@ function Home() {
                 Your presence is the greatest gift of all
               </Text>
               <Text fontSize={{ base: "sm", lg: "md" }} color="gray.700" lineHeight="relaxed">
-                For those who wish to give, we've setting up a registry with details to follow.
+                For those who wish to give, we're setting up a registry with details to follow.
               </Text>
             </Box>
 
@@ -393,7 +390,7 @@ function Home() {
             <Box>
               <Heading
                 fontSize={{ base: "2xl", lg: "3xl" }}
-                fontWeight="300"
+                fontWeight="500"
                 fontStyle="italic"
                 letterSpacing="wider"
                 textTransform="uppercase"

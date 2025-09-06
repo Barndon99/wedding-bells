@@ -12,7 +12,7 @@ import {
   Button, 
   useToast 
 } from '@chakra-ui/react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { SlideUp, FadeIn } from '../components/AnimatedSection'
 
 function RSVP() {
@@ -24,9 +24,12 @@ function RSVP() {
     dietaryRestrictions: '',
     message: ''
   })
+  const [formUnlocked, setFormUnlocked] = useState(false);
+  const [password, setPassword] = useState("");
+  const [passwordError, setPasswordError] = useState("");
   const toast = useToast()
-
-const handleSubmit = async (e) => {
+  const CORRECT_PASSWORD = "jantz2026";
+  const handleSubmit = async (e) => {
   e.preventDefault()
 
   const payload = {
@@ -43,7 +46,8 @@ const handleSubmit = async (e) => {
     await fetch("https://api.sheetbest.com/sheets/244811a3-f818-4d64-a75c-63bf14a62bb6", {
       method: "POST",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
+        "X-Api-Key": "pgKufb0CfBuU76nBgou!Jr$t-d3a%hkrm#s7Xvm-M30oeev6#8#nhS_DvhVGrc_-"
       },
       body: JSON.stringify(payload)
     })
@@ -83,6 +87,15 @@ const handleSubmit = async (e) => {
     })
   }
 
+  useEffect(() => {
+  const unlocked = localStorage.getItem("rsvpUnlocked");
+  if (unlocked === "true") setFormUnlocked(true);
+}, []);
+
+useEffect(() => {
+  localStorage.setItem("rsvpUnlocked", formUnlocked);
+}, [formUnlocked]);
+
   return (
     <Box minH="100vh" bg="#f0f3dc">
       <Container maxW="container.lg" py={16}>
@@ -100,11 +113,58 @@ const handleSubmit = async (e) => {
                 RSVP
               </Heading>
               <Text fontSize={{ base: "lg", md: "xl" }} color="gray.600" maxW="2xl">
-                We can't wait to celebrate with you! Please respond by August 2026
+                We can't wait to celebrate with you! Please respond by April 2026
               </Text>
             </VStack>
           </SlideUp>
 
+          {!formUnlocked ? (
+  <Box bg="white" p={8} borderRadius="lg" shadow="lg">
+    <VStack spacing={6}>
+      <Heading fontSize="xl" color="#5e4e33">Enter RSVP Access Code</Heading>
+
+      <FormControl isInvalid={!!passwordError}>
+        <FormLabel color="gray.700" fontWeight="500">Password</FormLabel>
+        <Input
+          type="password"
+          value={password}
+          onChange={(e) => {
+            setPassword(e.target.value);
+            setPasswordError("");
+          }}
+          placeholder="Enter password to unlock form"
+          focusBorderColor="#5e4e33"
+          size="lg"
+        />
+        {passwordError && (
+          <Text color="red.500" fontSize="sm" mt={2}>{passwordError}</Text>
+        )}
+      </FormControl>
+
+      <Button
+        onClick={() => {
+          if (password === CORRECT_PASSWORD) {
+            setFormUnlocked(true);
+          } else {
+            setPasswordError("Incorrect password. Please try again.");
+          }
+        }}
+        bg="#5e4e33"
+        color="white"
+        size="lg"
+        w="full"
+        py={6}
+        fontSize="md"
+        letterSpacing="wider"
+        textTransform="uppercase"
+        _hover={{ bg: "#0F3A2E" }}
+        _active={{ bg: "#0F3A2E" }}
+      >
+        Unlock Form
+      </Button>
+    </VStack>
+  </Box>
+) : (
           <FadeIn delay={0.3}>
             <Box w="full" maxW="2xl">
               <Box bg="white" p={8} borderRadius="lg" shadow="lg">
@@ -214,6 +274,8 @@ const handleSubmit = async (e) => {
             </Box>
             </Box>
           </FadeIn>
+)}
+
 
           <SlideUp delay={0.6}>
             <VStack spacing={4} textAlign="center" maxW="2xl">

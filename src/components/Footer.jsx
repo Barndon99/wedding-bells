@@ -53,17 +53,18 @@ function Footer() {
           {/* Couple Names */}
           <VStack align="start" spacing={4}>
             <Heading 
-              size="md" 
-              fontWeight="300"
+              size="sm" 
+              fontColor="white"
+              fontWeight="bold"
               letterSpacing="wider"
               textTransform="uppercase"
             >
               Katarina & Graham
             </Heading>
-            <Text fontSize="sm" color="gray.400">
+            <Text fontSize="sm" color="white">
               September 14, 2026
             </Text>
-            <Text fontSize="sm" color="gray.400">
+            <Text fontSize="sm" color="white">
               Celebrating love, family, and new beginnings
             </Text>
           </VStack>
@@ -72,7 +73,8 @@ function Footer() {
           <VStack align="start" spacing={4}>
             <Heading
               size="sm"
-              fontWeight="300"
+              fontColor="white"
+              fontWeight="bold"
               letterSpacing="wider"
               textTransform="uppercase"
               mb={2}
@@ -84,7 +86,7 @@ function Footer() {
                 as={RouterLink}
                 to="/"
                 fontSize="sm"
-                color="gray.300"
+                color="white"
                 _hover={{ color: "white" }}
               >
                 Home
@@ -93,7 +95,7 @@ function Footer() {
                 as={RouterLink}
                 to="/rsvp"
                 fontSize="sm"
-                color="gray.300"
+                color="white"
                 _hover={{ color: "white" }}
               >
                 RSVP
@@ -102,7 +104,7 @@ function Footer() {
                 as={RouterLink}
                 to="/photos"
                 fontSize="sm"
-                color="gray.300"
+                color="white"
                 _hover={{ color: "white" }}
               >
                 Photos
@@ -111,7 +113,7 @@ function Footer() {
                 as={RouterLink}
                 to="/song-requests"
                 fontSize="sm"
-                color="gray.300"
+                color="white"
                 _hover={{ color: "white" }}
               >
                 Song Requests
@@ -120,7 +122,7 @@ function Footer() {
                 as={RouterLink}
                 to="/location"
                 fontSize="sm"
-                color="gray.300"
+                color="white"
                 _hover={{ color: "white" }}
               >
                 Location
@@ -132,7 +134,8 @@ function Footer() {
           <VStack align="start" spacing={4}>
             <Heading 
               size="sm" 
-              fontWeight="300"
+              fontColor="white"
+              fontWeight="bold"
               letterSpacing="wider"
               textTransform="uppercase"
               mb={2}
@@ -140,10 +143,10 @@ function Footer() {
               Contact
             </Heading>
             <VStack align="start" spacing={2}>
-              <Text fontSize="sm" color="gray.300">
+              <Text fontSize="sm" color="white">
                 Bride and Groom
               </Text>
-              <Text fontSize="sm" color="gray.400">
+              <Text fontSize="sm" color="white">
                 kgjantz@gmail.com
               </Text>
             </VStack>
@@ -153,34 +156,35 @@ function Footer() {
           <VStack align="start" spacing={4}>
             <Heading 
               size="sm" 
-              fontWeight="300"
               letterSpacing="wider"
               textTransform="uppercase"
+              fontColor="white"
+              fontWeight="bold"
               mb={2}
             >
               Thank You
             </Heading>
-            <Text fontSize="sm" color="gray.300" lineHeight="tall">
+            <Text fontSize="sm" color="white" lineHeight="tall">
               We are so grateful for your love and support as we begin this new chapter together.
             </Text>
           </VStack>
         </SimpleGrid>
 
-        <Divider my={8} borderColor="gray.600" />
+        <Divider my={8} borderColor="gray.300" />
 
         {/* Bottom Section */}
         <HStack justify="space-between" align="center" flexWrap="wrap">
-          <Text fontSize="sm" color="gray.400">
+          <Text fontSize="sm" color="white">
             © 2026 Katarina & Graham. Made with ❤️ for our special day.
           </Text>
           <HStack spacing={4}>
-            <Text fontSize="sm" color="gray.400">
+            <Text fontSize="sm" color="white">
               Privacy
             </Text>
-            <Text fontSize="sm" color="gray.400">
+            <Text fontSize="sm" color="white">
               •
             </Text>
-            <Text fontSize="sm" color="gray.400">
+            <Text fontSize="sm" color="white">
               Contact
             </Text>
           </HStack>
