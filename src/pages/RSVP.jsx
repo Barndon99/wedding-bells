@@ -43,7 +43,8 @@ const handleSubmit = async (e) => {
     await fetch("https://api.sheetbest.com/sheets/244811a3-f818-4d64-a75c-63bf14a62bb6", {
       method: "POST",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
+        "X-Api-Key": "pgKufb0CfBuU76nBgou!Jr$t-d3a%hkrm#s7Xvm-M30oeev6#8#nhS_DvhVGrc_-"
       },
       body: JSON.stringify(payload)
     })
@@ -100,7 +101,7 @@ const handleSubmit = async (e) => {
                 RSVP
               </Heading>
               <Text fontSize={{ base: "lg", md: "xl" }} color="gray.600" maxW="2xl">
-                We can't wait to celebrate with you! Please respond by August 2026
+                We can't wait to celebrate with you! Please respond by April 2026
               </Text>
             </VStack>
           </SlideUp>

@@ -62,7 +62,7 @@ function Location() {
                       Comune di Fosciandora
                     </Text>
                     <Text fontSize="md" color="gray.600">
-                      <strong>Time:</strong> 4:00 PM
+                      <strong>Time:</strong> 3:30 PM
                     </Text>
                   </VStack>
 
@@ -104,7 +104,7 @@ function Location() {
                       Province of Lucca, Tuscany, Italy
                     </Text>
                     <Text fontSize="md" color="gray.600">
-                      <strong>Time:</strong> 5:30 PM - 11:00 PM
+                      <strong>Time:</strong> To follow
                     </Text>
                   </VStack>
 
