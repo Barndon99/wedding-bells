@@ -41,7 +41,7 @@ function Home() {
           {/* Small dots decoration */}
           <FadeIn delay={0.2}>
             <Countdown
-              date={'2026-09-14T11:00:00'}
+              date={'2026-09-09T11:00:00'}
               renderer={({ days, hours, minutes, seconds }) => <CountdownDisplay days={days} hours={hours} minutes={minutes} seconds={seconds}/>}
             />
           </FadeIn>
@@ -180,32 +180,29 @@ function Home() {
                   letterSpacing="wider"
                   textTransform="uppercase"
                   color="white"
-                  mb={{ base: 6, lg: 8 }}
+                  mb={{ base: 4, lg: 4 }}
                 >
                   A Note from the Bride & Groom
                 </Heading>
               </SlideInRight>
 
-              <VStack align="start" spacing={{ base: 6, lg: 8 }} w="full">
-                <Text color="white" fontSize={{ base: "md", lg: "lg" }} lineHeight="relaxed">
-                  We can't tell you how excited we are to share this important day with
-                  all of you. For us we are celebrating so much more than a wedding,
-                  but a lifelong commitment we pray will be filled with laughter,
-                  adventure & lots of love.
+              <VStack align="start" spacing={{ base: 6, lg: 6 }} w="full" height="fit-content">
+                <Text color="white" fontSize={{ base: "md", lg: "md" }} lineHeight="relaxed">
+                  As we get ready to say “I do”, we wanted to take a moment to thank you. Not just for being part of our wedding day, but for being apart of our lives. 
                 </Text>
 
-                <Text color="white" fontSize={{ base: "md", lg: "lg" }} lineHeight="relaxed">
-                  Please join us in celebration at our reception in September 14, 2026, following our intimate ceremony.
+                <Text color="white" fontSize={{ base: "md", lg: "md" }} lineHeight="relaxed">
+                  To us, this celebration is so much more than just a wedding. It’s a reflection of the love, laughter and lessons we’ve shared with so many of you along the way. Each of you has played a role in helping us become who we are and we will carry that with us into this next chapter. Whether you’ve known us since we were kids or have met us as a couple, your presence in our story means the world to us. 
                 </Text>
 
-                <Text color="white" fontSize={{ base: "md", lg: "lg" }} lineHeight="relaxed">
-                  Each one of you has played an important role in our story, and we are
-                  excited to have you as witnesses as we step into this journey
-                  together.
+                <Text color="white" fontSize={{ base: "md", lg: "md" }} lineHeight="relaxed">
+                  We feel incredibly lucky to be surrounded by such a loving, supportive community, and we’re honored to celebrate not only our love, but also the relationships and memories that have brought us to this moment. 
                 </Text>
+                                <Text color="white" fontSize={{ base: "md", lg: "md" }} lineHeight="relaxed">
+Thank you for walking along side us - in the past, present, and in the years to come.                 </Text>
 
-                <Text color="white" fontSize={{ base: "md", lg: "lg" }} mt={{ base: 6, lg: 8 }} fontStyle="italic">
-                  With Love,<br />
+                <Text color="white" fontSize={{ base: "md", lg: "md" }} mt={{ base: 6, lg: 8 }} fontStyle="italic">
+                  With all our Love,<br />
                   Katarina and Graham
                 </Text>
               </VStack>
