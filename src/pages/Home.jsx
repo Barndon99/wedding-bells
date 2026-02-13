@@ -41,7 +41,7 @@ function Home() {
           {/* Small dots decoration */}
           <FadeIn delay={0.2}>
             <Countdown
-              date={'2026-09-09T11:00:00'}
+              date={'2026-09-09T13:00:00'}
               renderer={({ days, hours, minutes, seconds }) => <CountdownDisplay days={days} hours={hours} minutes={minutes} seconds={seconds}/>}
             />
           </FadeIn>

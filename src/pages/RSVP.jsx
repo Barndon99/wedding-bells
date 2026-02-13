@@ -28,7 +28,7 @@ function RSVP() {
   const [password, setPassword] = useState("");
   const [passwordError, setPasswordError] = useState("");
   const toast = useToast()
-  const CORRECT_PASSWORD = "jantz2026";
+  const CORRECT_PASSWORD = "Jantz2026";
   const handleSubmit = async (e) => {
   e.preventDefault()
 
@@ -114,6 +114,9 @@ useEffect(() => {
               </Heading>
               <Text fontSize={{ base: "lg", md: "xl" }} color="gray.600" maxW="2xl">
                 We can't wait to celebrate with you! Please respond by April 2026
+              </Text>
+              <Text fontSize={{ base: "md", md: "lg" }} color="gray.600" maxW="2xl">
+                Due to limited capactiy; please only RSVP for the number of guests named on the invitation.
               </Text>
             </VStack>
           </SlideUp>
