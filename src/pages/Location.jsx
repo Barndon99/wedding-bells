@@ -30,7 +30,7 @@ function Location() {
                 Location & Directions
               </Heading>
               <Text fontSize={{ base: "lg", md: "xl" }} color="gray.600" maxW="2xl">
-                Join us at our beautiful venue in Fosciandora, Italy
+                Join us at our beautiful venue in Ceserana, Italy
               </Text>
             </VStack>
           </SlideUp>
@@ -56,10 +56,10 @@ function Location() {
                   
                   <VStack spacing={3} align="start">
                     <Text fontSize="lg" fontWeight="500" color="gray.800">
-                      Fosciandora
+                      Via Santa Maria
                     </Text>
                     <Text fontSize="md" color="gray.600">
-                      Comune di Fosciandora
+                      55020 Ceserana LU, Italy
                     </Text>
                     <Text fontSize="md" color="gray.600">
                       <strong>Time:</strong> 3:30 PM
@@ -68,7 +68,7 @@ function Location() {
 
                   <Button
                     as={Link}
-                    href="https://maps.google.com/?q=201+Fosciandora+Ranch+Rd,+Fosciandora,+Italy+93012"
+                    href="https://maps.google.com/?q=Via+Santa+Maria,+55020+Ceserana+LU,+Italy"
                     isExternal
                     bg="#5e4e33"
                     color="white"
@@ -98,10 +98,10 @@ function Location() {
                   
                   <VStack spacing={3} align="start">
                     <Text fontSize="lg" fontWeight="500" color="gray.800">
-                      Fosciandora Villa
+                      Via Santa Maria
                     </Text>
                     <Text fontSize="md" color="gray.600">
-                      Province of Lucca, Tuscany, Italy
+                      55020 Ceserana LU, Italy
                     </Text>
                     <Text fontSize="md" color="gray.600">
                       <strong>Time:</strong> To follow
@@ -110,7 +110,7 @@ function Location() {
 
                   <Button
                     as={Link}
-                    href="https://maps.google.com/?q=201+Fosciandora+Ranch+Rd,+Fosciandora,+Italy+93012"
+                    href="https://maps.google.com/?q=Via+Santa+Maria,+55020+Ceserana+LU,+Italy"
                     isExternal
                     bg="#5e4e33"
                     color="white"

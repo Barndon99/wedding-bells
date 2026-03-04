@@ -21,6 +21,7 @@ function RSVP() {
     email: '',
     attendance: '',
     guests: '1',
+    guestNames: [],
     dietaryRestrictions: '',
     message: ''
   })
@@ -39,7 +40,8 @@ function RSVP() {
     "Attendance": formData.attendance,
     "Guests": formData.guests,
     "Dietary Restrictions": formData.dietaryRestrictions,
-    "Message": formData.message
+    "Message": formData.message,
+    "Guest Names": (formData.guestNames || []).filter(Boolean).join(', ')
   }
 
   try {
@@ -65,6 +67,7 @@ function RSVP() {
       email: '',
       attendance: '',
       guests: '1',
+      guestNames: [],
       dietaryRestrictions: '',
       message: ''
     })
@@ -81,10 +84,23 @@ function RSVP() {
 }
 
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    })
+    const { name, value } = e.target
+    if (name === 'guests') {
+      const count = parseInt(value, 10)
+      const currentNames = formData.guestNames || []
+      const newLength = Math.max(0, count - 1)
+      const guestNames = Array.from({ length: newLength }, (_, i) => currentNames[i] ?? '')
+      setFormData({ ...formData, guests: value, guestNames })
+      return
+    }
+    setFormData({ ...formData, [name]: value })
+  }
+
+  const handleGuestNameChange = (index, value) => {
+    const guestNames = [...(formData.guestNames || [])]
+    while (guestNames.length <= index) guestNames.push('')
+    guestNames[index] = value
+    setFormData({ ...formData, guestNames })
   }
 
   useEffect(() => {
@@ -230,6 +246,27 @@ useEffect(() => {
                           <option value="4">4 people</option>
                         </Select>
                       </FormControl>
+
+                      {parseInt(formData.guests, 10) > 1 && (
+                        <FormControl>
+                          <FormLabel color="gray.700" fontWeight="500">Guest Names</FormLabel>
+                          <VStack spacing={3} align="stretch">
+                            {Array.from(
+                              { length: parseInt(formData.guests, 10) - 1 },
+                              (_, index) => (
+                                <Input
+                                  key={index}
+                                  value={formData.guestNames[index] ?? ''}
+                                  onChange={(e) => handleGuestNameChange(index, e.target.value)}
+                                  placeholder={`Name of guest ${index + 2}`}
+                                  focusBorderColor="#5e4e33"
+                                  size="lg"
+                                />
+                              )
+                            )}
+                          </VStack>
+                        </FormControl>
+                      )}
 
                       <FormControl>
                         <FormLabel color="gray.700" fontWeight="500">Dietary Restrictions</FormLabel>

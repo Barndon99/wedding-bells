@@ -96,7 +96,7 @@ function Home() {
       </Box>
 
       {/* Wedding Details Section */}
-      <Box bg="#5e4e33" color="white" h={{ base: "auto", lg: "620px" }} position="relative">
+      <Box bg="#5e4e33" color="white" minH={{ base: "auto", lg: "620px" }} position="relative" overflow="hidden">
         {/* Pineapple decoration */}
         <Box
           position="absolute"
@@ -122,9 +122,51 @@ function Home() {
           position="relative"
           zIndex={2}
         >
+          {/* Left Column - A Note from the Bride & Groom (more room) */}
           <Box p={{ base: 8, lg: 16 }} display="flex">
             <VStack align="start" spacing={{ base: 6, lg: 8 }} w="full">
               <SlideInLeft>
+                <Heading
+                  fontSize={{ base: "2xl", lg: "3xl" }}
+                  fontWeight="500"
+                  fontStyle="italic"
+                  letterSpacing="wider"
+                  textTransform="uppercase"
+                  color="white"
+                  mb={{ base: 4, lg: 4 }}
+                >
+                  A Note from the Bride & Groom
+                </Heading>
+              </SlideInLeft>
+
+              <VStack align="start" spacing={{ base: 6, lg: 6 }} w="full" height="fit-content">
+                <Text color="white" fontSize={{ base: "md", lg: "md" }} lineHeight="relaxed">
+                  As we get ready to say “I do”, we wanted to take a moment to thank you. Not just for being part of our wedding day, but for being apart of our lives. 
+                </Text>
+
+                <Text color="white" fontSize={{ base: "md", lg: "md" }} lineHeight="relaxed">
+                  To us, this celebration is so much more than just a wedding. It’s a reflection of the love, laughter and lessons we’ve shared with so many of you along the way. Each of you has played a role in helping us become who we are and we will carry that with us into this next chapter. Whether you’ve known us since we were kids or have met us as a couple, your presence in our story means the world to us. 
+                </Text>
+
+                <Text color="white" fontSize={{ base: "md", lg: "md" }} lineHeight="relaxed">
+                  We feel incredibly lucky to be surrounded by such a loving, supportive community, and we’re honored to celebrate not only our love, but also the relationships and memories that have brought us to this moment. 
+                </Text>
+                <Text color="white" fontSize={{ base: "md", lg: "md" }} lineHeight="relaxed">
+                  Thank you for walking along side us - in the past, present, and in the years to come.
+                </Text>
+
+                <Text color="white" fontSize={{ base: "md", lg: "md" }} mt={{ base: 6, lg: 8 }} fontStyle="italic">
+                  With all our Love,<br />
+                  Katarina and Graham
+                </Text>
+              </VStack>
+            </VStack>
+          </Box>
+
+          {/* Right Column - Wedding Details */}
+          <Box p={{ base: 8, lg: 16 }} display="flex" alignItems="flex-start">
+            <VStack align="start" spacing={{ base: 6, lg: 8 }} w="full">
+              <SlideInRight>
                 <Heading
                   fontSize={{ base: "2xl", lg: "3xl" }}
                   fontWeight="500"
@@ -136,7 +178,7 @@ function Home() {
                 >
                   Wedding Details
                 </Heading>
-              </SlideInLeft>
+              </SlideInRight>
               <StaggerContainer>
                 <StaggerItem>
                   <Box marginBottom={5}>
@@ -152,8 +194,8 @@ function Home() {
                     <Text fontSize={{ base: "sm", lg: "md" }} fontWeight="bold" letterSpacing="wider" textTransform="uppercase" mb={2} color="white">
                       Reception Location
                     </Text>
-                    <Text fontSize={{ base: "lg", lg: "xl" }} color="white" >55020 Ceserana LU</Text>
-                    <Text fontSize={{ base: "md", lg: "lg" }} color="white">Via Santa Maria, Italy </Text>
+                    <Text fontSize={{ base: "lg", lg: "xl" }} color="white">Via Santa Maria</Text>
+                    <Text fontSize={{ base: "md", lg: "lg" }} color="white">55020 Ceserana LU, Italy</Text>
                   </Box>
                 </StaggerItem>
 
@@ -166,46 +208,6 @@ function Home() {
                   </Box>
                 </StaggerItem>
               </StaggerContainer>
-            </VStack>
-          </Box>
-
-          {/* Right Column - Additional Info */}
-          <Box p={{ base: 8, lg: 16 }} display="flex" alignItems="center">
-            <VStack align="start" spacing={{ base: 6, lg: 8 }} w="full">
-              <SlideInRight>
-                <Heading
-                  fontSize={{ base: "2xl", lg: "3xl" }}
-                  fontWeight="500"
-                  fontStyle="italic"
-                  letterSpacing="wider"
-                  textTransform="uppercase"
-                  color="white"
-                  mb={{ base: 4, lg: 4 }}
-                >
-                  A Note from the Bride & Groom
-                </Heading>
-              </SlideInRight>
-
-              <VStack align="start" spacing={{ base: 6, lg: 6 }} w="full" height="fit-content">
-                <Text color="white" fontSize={{ base: "md", lg: "md" }} lineHeight="relaxed">
-                  As we get ready to say “I do”, we wanted to take a moment to thank you. Not just for being part of our wedding day, but for being apart of our lives. 
-                </Text>
-
-                <Text color="white" fontSize={{ base: "md", lg: "md" }} lineHeight="relaxed">
-                  To us, this celebration is so much more than just a wedding. It’s a reflection of the love, laughter and lessons we’ve shared with so many of you along the way. Each of you has played a role in helping us become who we are and we will carry that with us into this next chapter. Whether you’ve known us since we were kids or have met us as a couple, your presence in our story means the world to us. 
-                </Text>
-
-                <Text color="white" fontSize={{ base: "md", lg: "md" }} lineHeight="relaxed">
-                  We feel incredibly lucky to be surrounded by such a loving, supportive community, and we’re honored to celebrate not only our love, but also the relationships and memories that have brought us to this moment. 
-                </Text>
-                                <Text color="white" fontSize={{ base: "md", lg: "md" }} lineHeight="relaxed">
-Thank you for walking along side us - in the past, present, and in the years to come.                 </Text>
-
-                <Text color="white" fontSize={{ base: "md", lg: "md" }} mt={{ base: 6, lg: 8 }} fontStyle="italic">
-                  With all our Love,<br />
-                  Katarina and Graham
-                </Text>
-              </VStack>
             </VStack>
           </Box>
         </SimpleGrid>
