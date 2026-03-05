@@ -62,7 +62,7 @@ function Location() {
                       55020 Ceserana LU, Italy
                     </Text>
                     <Text fontSize="md" color="gray.600">
-                      <strong>Time:</strong> 3:30 PM
+                      <strong>Time:</strong> 1:00 PM
                     </Text>
                   </VStack>
 
@@ -144,7 +144,7 @@ function Location() {
                 </Heading>
 
                 <StaggerContainer>
-                  <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8} w="full">
+                  <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8} w="full" alignItems="flex-start">
                     {/* Parking */}
                     <StaggerItem>
                       <Box bg="white" p={6} borderRadius="lg" shadow="md">

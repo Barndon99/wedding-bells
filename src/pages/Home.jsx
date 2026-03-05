@@ -186,7 +186,7 @@ function Home() {
                       Date
                     </Text>
                     <Text fontSize={{ base: "lg", lg: "xl" }} color="white">September 14, 2026</Text>
-                    <Text fontSize={{ base: "md", lg: "lg" }} color="white">11:00am - 1:00pm</Text>
+                    <Text fontSize={{ base: "md", lg: "lg" }} color="white">1:00pm</Text>
                   </Box>
                 </StaggerItem>
                 <StaggerItem>
